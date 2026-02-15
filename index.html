@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html lang="tr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Keske Nakliyat - Güvenli, Hızlı ve Profesyonel Evden Eve Nakliyat Hizmetleri. Sigortalı Taşımacılık, 7/24 Destek. Hemen Fiyat Alın!">
+    <meta name="keywords" content="nakliyat, evden eve nakliyat, parça eşya taşıma, ofis taşıma, şehirler arası nakliyat">
+    <meta name="author" content="Keske Nakliyat">
+    <meta name="robots" content="index, follow">
+    <title>Keske Nakliyat - Güvenli Evden Eve Nakliyat Hizmetleri</title>
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.keskenakliyat.com/">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.keskenakliyat.com/">
+    <meta property="og:title" content="Keske Nakliyat - Güvenli Evden Eve Nakliyat Hizmetleri">
+    <meta property="og:description" content="15 yıllık tecrübe ile sigortalı, hızlı ve profesyonel nakliyat hizmetleri. Evden eve, ofis taşıma ve parça eşya nakliyatı. 7/24 Destek.">
+    <meta property="og:image" content="https://www.keskenakliyat.com/og-image.jpg">
+    <meta property="og:locale" content="tr_TR">
+    <meta property="og:site_name" content="Keske Nakliyat">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://www.keskenakliyat.com/">
+    <meta name="twitter:title" content="Keske Nakliyat - Güvenli Evden Eve Nakliyat">
+    <meta name="twitter:description" content="15 yıllık tecrübe ile sigortalı, hızlı ve profesyonel nakliyat hizmetleri. 7/24 Destek.">
+    <meta name="twitter:image" content="https://www.keskenakliyat.com/og-image.jpg">
+    
+    <!-- Google Analytics (Placeholder) -->
+    <!-- TODO: Google Analytics ID'nizi buraya ekleyin -->
+    <!-- 
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    -->
+    
+    <!-- Google Ads Conversion Tracking (Placeholder) -->
+    <!-- TODO: Google Ads ID'nizi buraya ekleyin -->
+    <!--
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-XXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-XXXXXXXXX');
+    </script>
+    -->
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        /* Glassmorphism Header */
+        .glass-header {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Pulse Animation for CTA */
+        @keyframes pulse-ring {
+            0% {
+                transform: scale(0.95);
+                box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.7);
+            }
+            70% {
+                transform: scale(1);
+                box-shadow: 0 0 0 15px rgba(245, 158, 11, 0);
+            }
+            100% {
+                transform: scale(0.95);
+                box-shadow: 0 0 0 0 rgba(245, 158, 11, 0);
+            }
+        }
+        
+        .pulse-animation {
+            animation: pulse-ring 2s infinite;
+        }
+        
+        /* Card Hover Effect */
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Accordion */
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        
+        .accordion-content.active {
+            max-height: 500px;
+        }
+        
+        /* Mobile Fixed Bottom Bar */
+        .mobile-bottom-bar {
+            box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        /* Mobil bottom bar için body padding */
+        @media (max-width: 768px) {
+            body {
+                padding-bottom: 85px;
+            }
+        }
+        
+        /* V2 MODERNIZATION - Mesh Gradient Animations */
+        @keyframes mesh-gradient-1 {
+            0%, 100% {
+                transform: translate(0, 0) scale(1);
+                opacity: 0.15;
+            }
+            50% {
+                transform: translate(30px, -30px) scale(1.1);
+                opacity: 0.25;
+            }
+        }
+        
+        @keyframes mesh-gradient-2 {
+            0%, 100% {
+                transform: translate(0, 0) scale(1);
+                opacity: 0.15;
+            }
+            50% {
+                transform: translate(-40px, 40px) scale(1.15);
+                opacity: 0.2;
+            }
+        }
+        
+        .mesh-gradient-1 {
+            animation: mesh-gradient-1 8s ease-in-out infinite;
+        }
+        
+        .mesh-gradient-2 {
+            animation: mesh-gradient-2 10s ease-in-out infinite;
+        }
+        
+        /* Glassmorphism Cards */
+        .glass-card {
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            background: rgba(255, 255, 255, 0.95);
+        }
+        
+        /* Shimmer Button Effect */
+        @keyframes shimmer {
+            0% {
+                background-position: -200% center;
+            }
+            100% {
+                background-position: 200% center;
+            }
+        }
+        
+        .shimmer-button {
+            background: linear-gradient(90deg, #f59e0b 0%, #fbbf24 50%, #f59e0b 100%);
+            background-size: 200% auto;
+            transition: all 0.3s ease;
+        }
+        
+        .shimmer-button:hover {
+            animation: shimmer 1.5s linear infinite;
+        }
+        
+        /* Icon Halo Effect */
+        .icon-halo {
+            position: relative;
+        }
+        
+        .icon-halo::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 120%;
+            height: 120%;
+            background: radial-gradient(circle, rgba(245, 158, 11, 0.2) 0%, transparent 70%);
+            border-radius: 50%;
+            z-index: -1;
+        }
+        
+        /* Scroll Reveal Animations */
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        
+        .scroll-reveal.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Floating WhatsApp Button */
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 100px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            z-index: 999;
+            cursor: pointer;
+            animation: float-bounce 3s ease-in-out infinite;
+        }
+        
+        @keyframes float-bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+        
+        .floating-whatsapp:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 30px rgba(37, 211, 102, 0.6);
+        }
+        
+        @media (min-width: 768px) {
+            .floating-whatsapp {
+                display: none;
+            }
+        }
+    </style>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: '#1e293b',
+                        amber: '#f59e0b',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-900">
+
+    <!-- Sticky Glassmorphism Header -->
+    <header class="glass-header fixed top-0 left-0 right-0 z-50" role="banner">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <a href="#anasayfa" class="flex items-center space-x-2">
+                    <div class="w-10 h-10 bg-gradient-to-br from-navy to-blue-900 rounded-lg flex items-center justify-center">
+                        <i data-lucide="truck" class="text-white w-6 h-6"></i>
+                    </div>
+                    <span class="text-2xl font-bold text-navy">Keske <span class="text-amber">Nakliyat</span></span>
+                </a>
+                
+                <!-- Desktop Menu -->
+                <ul class="hidden md:flex items-center space-x-8">
+                    <li><a href="#anasayfa" class="text-navy hover:text-amber transition font-medium">Anasayfa</a></li>
+                    <li><a href="#hizmetler" class="text-navy hover:text-amber transition font-medium">Hizmetler</a></li>
+                    <li><a href="#neden-biz" class="text-navy hover:text-amber transition font-medium">Neden Biz?</a></li>
+                    <li><a href="#sss" class="text-navy hover:text-amber transition font-medium">S.S.S</a></li>
+                    <li>
+                        <a href="tel:+905XXXXXXXXX" class="bg-navy text-white px-6 py-2.5 rounded-full hover:bg-opacity-90 transition font-semibold flex items-center gap-2">
+                            <i data-lucide="phone" class="w-4 h-4"></i>
+                            Hemen Ara
+                        </a>
+                    </li>
+                </ul>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-navy" aria-label="Menüyü Aç/Kapat" aria-expanded="false" aria-controls="mobile-menu">
+                    <i data-lucide="menu" class="w-7 h-7"></i>
+                </button>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4" role="navigation" aria-label="Mobil Menü">
+                <ul class="flex flex-col space-y-3">
+                    <li><a href="#anasayfa" class="block text-navy hover:text-amber transition font-medium py-2">Anasayfa</a></li>
+                    <li><a href="#hizmetler" class="block text-navy hover:text-amber transition font-medium py-2">Hizmetler</a></li>
+                    <li><a href="#neden-biz" class="block text-navy hover:text-amber transition font-medium py-2">Neden Biz?</a></li>
+                    <li><a href="#sss" class="block text-navy hover:text-amber transition font-medium py-2">S.S.S</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="anasayfa" class="pt-32 pb-20 bg-gradient-to-br from-navy via-blue-900 to-navy text-white relative overflow-hidden">
+        <!-- Background Pattern with Animated Mesh Gradient -->
+        <div class="absolute inset-0 opacity-10">
+            <div class="mesh-gradient-1 absolute top-0 left-0 w-96 h-96 bg-amber rounded-full blur-3xl"></div>
+            <div class="mesh-gradient-2 absolute bottom-0 right-0 w-96 h-96 bg-blue-500 rounded-full blur-3xl"></div>
+            <div class="mesh-gradient-1 absolute top-1/2 left-1/2 w-64 h-64 bg-purple-500 rounded-full blur-3xl" style="animation-delay: 2s;"></div>
+        </div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <!-- Left Content -->
+                <div>
+                    <div class="inline-block bg-amber bg-opacity-20 border border-amber rounded-full px-4 py-2 mb-6">
+                        <span class="text-amber font-semibold text-sm">✨ Güvenli & Profesyonel Taşımacılık</span>
+                    </div>
+                    
+                    <h1 class="text-5xl md:text-6xl font-bold leading-tight tracking-tight mb-6">
+                        Keske Nakliyat ile <span class="text-amber">Güvenle Taşının</span>
+                    </h1>
+                    
+                    <p class="text-xl text-gray-300 mb-8 leading-relaxed">
+                        Evden eve, ofis taşıma ve parça eşya nakliyatında 15 yıllık tecrübe. Sigortalı, hızlı ve ekonomik çözümler.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="https://wa.me/905XXXXXXXXX?text=Merhaba,%20nakliyat%20hizmeti%20hakkında%20bilgi%20almak%20istiyorum." 
+                           target="_blank"
+                           class="shimmer-button pulse-animation text-navy px-8 py-4 rounded-full font-bold text-lg transition flex items-center justify-center gap-3 shadow-2xl">
+                            <i data-lucide="message-circle" class="w-6 h-6"></i>
+                            WhatsApp'tan Fiyat Al
+                        </a>
+                        
+                        <a href="tel:+905XXXXXXXXX" 
+                           class="bg-white bg-opacity-10 backdrop-blur-sm border-2 border-white text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-opacity-20 transition flex items-center justify-center gap-3">
+                            <i data-lucide="phone" class="w-6 h-6"></i>
+                            Hemen Ara
+                        </a>
+                    </div>
+                    
+                    <!-- Trust Badges -->
+                    <div class="mt-12 flex flex-wrap gap-6 items-center">
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="shield-check" class="w-5 h-5 text-amber"></i>
+                            <span class="text-sm">Sigortalı Taşıma</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="clock" class="w-5 h-5 text-amber"></i>
+                            <span class="text-sm">7/24 Destek</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="users" class="w-5 h-5 text-amber"></i>
+                            <span class="text-sm">Profesyonel Ekip</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right Image -->
+                <div class="hidden md:block">
+                    <div class="relative">
+                        <div class="absolute inset-0 bg-amber rounded-3xl blur-2xl opacity-20"></div>
+                        <img src="https://images.unsplash.com/photo-1464207687429-7505649dae38?w=800&h=600&fit=crop&q=80" 
+                             alt="Keske Nakliyat - Modern ve Güvenli Nakliyat Kamyonu" 
+                             loading="lazy"
+                             width="800"
+                             height="600"
+                             class="relative rounded-3xl shadow-2xl w-full h-auto">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="hizmetler" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 scroll-reveal">
+                <h2 class="text-4xl md:text-5xl font-bold tracking-tight text-navy mb-4">Hizmetlerimiz</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    İhtiyacınıza özel profesyonel nakliyat çözümleri
+                </p>
+            </div>
+            
+            <!-- Bento Grid Services -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Service 1 - Featured (2x2 Bento) -->
+                <div class="scroll-reveal card-hover glass-card lg:col-span-2 lg:row-span-2 rounded-2xl p-10 border border-gray-200 shadow-lg relative overflow-hidden flex flex-col">
+                    <div class="absolute top-0 right-0 w-64 h-64 bg-amber opacity-5 rounded-full blur-3xl"></div>
+                    <div class="relative z-10 flex-1 flex flex-col">
+                        <div class="icon-halo w-20 h-20 bg-gradient-to-br from-amber to-orange-600 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                            <i data-lucide="home" class="w-10 h-10 text-white"></i>
+                        </div>
+                        <h3 class="text-3xl font-bold tracking-tight text-navy mb-4">Evden Eve Nakliyat</h3>
+                        <p class="text-gray-600 text-lg mb-6 leading-relaxed">
+                            15 yıllık tecrübemizle ev eşyalarınızı özenle paketleyip, yeni adresinize hasar almadan güvenle taşıyoruz. Profesyonel ekibimiz ve modern araçlarımızla taşınma stresini ortadan kaldırıyoruz.
+                        </p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8 flex-1">
+                            <div class="flex items-start gap-3">
+                                <div class="w-8 h-8 bg-amber bg-opacity-10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <i data-lucide="check" class="w-5 h-5 text-amber"></i>
+                                </div>
+                                <div>
+                                    <p class="font-semibold text-navy text-sm">Profesyonel Paketleme</p>
+                                    <p class="text-xs text-gray-500">Özel malzemelerle koruma</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="w-8 h-8 bg-amber bg-opacity-10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <i data-lucide="check" class="w-5 h-5 text-amber"></i>
+                                </div>
+                                <div>
+                                    <p class="font-semibold text-navy text-sm">Sigortalı Taşıma</p>
+                                    <p class="text-xs text-gray-500">Tam güvence altında</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="w-8 h-8 bg-amber bg-opacity-10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <i data-lucide="check" class="w-5 h-5 text-amber"></i>
+                                </div>
+                                <div>
+                                    <p class="font-semibold text-navy text-sm">Montaj-Demontaj</p>
+                                    <p class="text-xs text-gray-500">Mobilya kurulum hizmeti</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="w-8 h-8 bg-amber bg-opacity-10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <i data-lucide="check" class="w-5 h-5 text-amber"></i>
+                                </div>
+                                <div>
+                                    <p class="font-semibold text-navy text-sm">Ücretsiz Keşif</p>
+                                    <p class="text-xs text-gray-500">Net fiyat garantisi</p>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="https://wa.me/905XXXXXXXXX?text=Merhaba,%20*Evden%20Eve%20Nakliyat*%20hizmeti%20hakkında%20fiyat%20teklifi%20almak%20istiyorum." 
+                           target="_blank"
+                           class="inline-block text-center bg-amber text-navy px-8 py-3.5 rounded-xl font-bold hover:bg-opacity-90 transition shadow-lg">
+                            Hemen Fiyat Al →
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Service 2 - Ofis -->
+                <div class="scroll-reveal card-hover glass-card rounded-2xl p-8 border border-gray-200 shadow-lg">
+                    <div class="icon-halo w-16 h-16 bg-gradient-to-br from-navy to-blue-900 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                        <i data-lucide="briefcase" class="w-8 h-8 text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold tracking-tight text-navy mb-3">Ofis Taşıma</h3>
+                    <p class="text-gray-600 mb-4">
+                        İş yerinizi minimum aksama ile yeni adresinize taşıyoruz.
+                    </p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center gap-2 text-sm text-gray-700">
+                            <i data-lucide="check" class="w-4 h-4 text-amber"></i>
+                            Hızlı Taşıma
+                        </li>
+                        <li class="flex items-center gap-2 text-sm text-gray-700">
+                            <i data-lucide="check" class="w-4 h-4 text-amber"></i>
+                            Kurulum Desteği
+                        </li>
+                        <li class="flex items-center gap-2 text-sm text-gray-700">
+                            <i data-lucide="check" class="w-4 h-4 text-amber"></i>
+                            Güvenli Taşıma
+                        </li>
+                    </ul>
+                    <a href="https://wa.me/905XXXXXXXXX?text=Merhaba,%20*Ofis%20Taşıma*%20hizmeti%20hakkında%20fiyat%20teklifi%20almak%20istiyorum." 
+                       target="_blank"
+                       class="block text-center bg-navy text-white py-3 rounded-xl font-semibold hover:bg-opacity-90 transition">
+                        Fiyat Al
+                    </a>
+                </div>
+                
+                <!-- Service 3 - Parça Eşya -->
+                <div class="scroll-reveal card-hover glass-card rounded-2xl p-8 border border-gray-200 shadow-lg">
+                    <div class="icon-halo w-16 h-16 bg-gradient-to-br from-amber to-orange-600 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                        <i data-lucide="package" class="w-8 h-8 text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold tracking-tight text-navy mb-3">Parça Eşya</h3>
+                    <p class="text-gray-600 mb-4">
+                        Tek bir eşya veya birkaç parçayı ekonomik fiyatlarla taşıyoruz.
+                    </p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center gap-2 text-sm text-gray-700">
+                            <i data-lucide="check" class="w-4 h-4 text-amber"></i>
+                            Ekonomik Fiyat
+                        </li>
+                        <li class="flex items-center gap-2 text-sm text-gray-700">
+                            <i data-lucide="check" class="w-4 h-4 text-amber"></i>
+                            Özel Paketleme
+                        </li>
+                        <li class="flex items-center gap-2 text-sm text-gray-700">
+                            <i data-lucide="check" class="w-4 h-4 text-amber"></i>
+                            Hızlı Teslimat
+                        </li>
+                    </ul>
+                    <a href="https://wa.me/905XXXXXXXXX?text=Merhaba,%20*Parça%20Eşya%20Taşıma*%20hizmeti%20hakkında%20fiyat%20teklifi%20almak%20istiyorum." 
+                       target="_blank"
+                       class="block text-center bg-amber text-navy py-3 rounded-xl font-semibold hover:bg-opacity-90 transition">
+                        Fiyat Al
+                    </a>
+                </div>
+                
+                <!-- Service 4 - Şehirler Arası (2 columns wide) -->
+                <div class="scroll-reveal card-hover glass-card lg:col-span-2 rounded-2xl p-8 border border-gray-200 shadow-lg flex flex-col md:flex-row gap-6 items-center">
+                    <div class="flex-shrink-0">
+                        <div class="icon-halo w-20 h-20 bg-gradient-to-br from-navy to-blue-900 rounded-2xl flex items-center justify-center shadow-lg">
+                            <i data-lucide="map-pin" class="w-10 h-10 text-white"></i>
+                        </div>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="text-2xl font-bold tracking-tight text-navy mb-3">Şehirler Arası Nakliyat</h3>
+                        <p class="text-gray-600 mb-4">
+                            Türkiye'nin her yerine güvenli ve zamanında teslimat. Modern takip sistemi ile eşyalarınızın nerede olduğunu her an bilin.
+                        </p>
+                        <div class="flex flex-wrap gap-4">
+                            <div class="flex items-center gap-2 text-sm text-gray-700">
+                                <i data-lucide="check" class="w-4 h-4 text-amber"></i>
+                                Tüm Türkiye
+                            </div>
+                            <div class="flex items-center gap-2 text-sm text-gray-700">
+                                <i data-lucide="check" class="w-4 h-4 text-amber"></i>
+                                Takip Sistemi
+                            </div>
+                            <div class="flex items-center gap-2 text-sm text-gray-700">
+                                <i data-lucide="check" class="w-4 h-4 text-amber"></i>
+                                Zamanında Teslimat
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-shrink-0">
+                        <a href="https://wa.me/905XXXXXXXXX?text=Merhaba,%20*Şehirler%20Arası%20Nakliyat*%20hizmeti%20hakkında%20fiyat%20teklifi%20almak%20istiyorum." 
+                           target="_blank"
+                           class="inline-block text-center bg-navy text-white px-8 py-3 rounded-xl font-semibold hover:bg-opacity-90 transition whitespace-nowrap">
+                            Fiyat Al
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Us Section -->
+    <section id="neden-biz" class="py-20 bg-gradient-to-br from-gray-50 to-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 scroll-reveal">
+                <h2 class="text-4xl md:text-5xl font-bold tracking-tight text-navy mb-4">Neden Keske Nakliyat?</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Binlerce müşterimizin tercihi, güvenilir nakliyat çözümleri
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                <!-- Feature 1 -->
+                <div class="scroll-reveal bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+                    <div class="icon-halo w-14 h-14 bg-amber bg-opacity-10 rounded-xl flex items-center justify-center mb-4">
+                        <i data-lucide="shield-check" class="w-7 h-7 text-amber"></i>
+                    </div>
+                    <h3 class="text-xl font-bold tracking-tight text-navy mb-3">Sigortalı Taşımacılık</h3>
+                    <p class="text-gray-600">
+                        Tüm eşyalarınız sigorta güvencesi altında taşınır. Olası hasar durumlarında tam teminat.
+                    </p>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="scroll-reveal bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+                    <div class="icon-halo w-14 h-14 bg-amber bg-opacity-10 rounded-xl flex items-center justify-center mb-4">
+                        <i data-lucide="headphones" class="w-7 h-7 text-amber"></i>
+                    </div>
+                    <h3 class="text-xl font-bold tracking-tight text-navy mb-3">7/24 Canlı Destek</h3>
+                    <p class="text-gray-600">
+                        Günün her saati ulaşabileceğiniz müşteri hizmetleri ekibimiz her zaman yanınızda.
+                    </p>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="scroll-reveal bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+                    <div class="icon-halo w-14 h-14 bg-amber bg-opacity-10 rounded-xl flex items-center justify-center mb-4">
+                        <i data-lucide="users" class="w-7 h-7 text-amber"></i>
+                    </div>
+                    <h3 class="text-xl font-bold tracking-tight text-navy mb-3">Profesyonel Ekip</h3>
+                    <p class="text-gray-600">
+                        Alanında uzman, deneyimli ve güler yüzlü ekip arkadaşlarımız hizmetinizde.
+                    </p>
+                </div>
+                
+                <!-- Feature 4 -->
+                <div class="scroll-reveal bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+                    <div class="icon-halo w-14 h-14 bg-amber bg-opacity-10 rounded-xl flex items-center justify-center mb-4">
+                        <i data-lucide="package-check" class="w-7 h-7 text-amber"></i>
+                    </div>
+                    <h3 class="text-xl font-bold tracking-tight text-navy mb-3">Özel Paketleme</h3>
+                    <p class="text-gray-600">
+                        Kırılabilir ve değerli eşyalarınız için özel paketleme malzemeleri kullanıyoruz.
+                    </p>
+                </div>
+                
+                <!-- Feature 5 -->
+                <div class="scroll-reveal bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+                    <div class="icon-halo w-14 h-14 bg-amber bg-opacity-10 rounded-xl flex items-center justify-center mb-4">
+                        <i data-lucide="truck" class="w-7 h-7 text-amber"></i>
+                    </div>
+                    <h3 class="text-xl font-bold tracking-tight text-navy mb-3">Modern Araç Filomuz</h3>
+                    <p class="text-gray-600">
+                        Yeni model, bakımlı ve her türlü nakliyat için uygun araçlarımız mevcut.
+                    </p>
+                </div>
+                
+                <!-- Feature 6 -->
+                <div class="scroll-reveal bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+                    <div class="icon-halo w-14 h-14 bg-amber bg-opacity-10 rounded-xl flex items-center justify-center mb-4">
+                        <i data-lucide="dollar-sign" class="w-7 h-7 text-amber"></i>
+                    </div>
+                    <h3 class="text-xl font-bold tracking-tight text-navy mb-3">Uygun Fiyat</h3>
+                    <p class="text-gray-600">
+                        Kaliteden ödün vermeden rekabetçi fiyatlarla hizmet sunuyoruz.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Stats -->
+            <div class="scroll-reveal grid md:grid-cols-4 gap-8 bg-navy rounded-3xl p-8 md:p-12 text-white shadow-2xl">
+                <div class="text-center">
+                    <div class="text-4xl md:text-5xl font-bold text-amber mb-2">15+</div>
+                    <div class="text-gray-300">Yıllık Tecrübe</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl md:text-5xl font-bold text-amber mb-2">10K+</div>
+                    <div class="text-gray-300">Mutlu Müşteri</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl md:text-5xl font-bold text-amber mb-2">50+</div>
+                    <div class="text-gray-300">Profesyonel Ekip</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl md:text-5xl font-bold text-amber mb-2">100%</div>
+                    <div class="text-gray-300">Müşteri Memnuniyeti</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="sss" class="py-20 bg-white">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <div class="text-center mb-16 scroll-reveal">
+                <h2 class="text-4xl md:text-5xl font-bold tracking-tight text-navy mb-4">Sıkça Sorulan Sorular</h2>
+                <p class="text-xl text-gray-600">
+                    Merak ettiklerinizin yanıtları
+                </p>
+            </div>
+            
+            <div class="space-y-4">
+                <!-- FAQ 1 -->
+                <div class="scroll-reveal bg-gray-50 rounded-2xl overflow-hidden border border-gray-200">
+                    <button class="accordion-btn w-full text-left px-6 py-5 flex items-center justify-between hover:bg-gray-100 transition">
+                        <span class="font-semibold text-lg text-navy">Nakliyat fiyatları nasıl belirleniyor?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-navy transition-transform"></i>
+                    </button>
+                    <div class="accordion-content px-6 pb-5">
+                        <p class="text-gray-600 leading-relaxed">
+                            Fiyatlandırma; taşınacak eşya miktarı, mesafe, kat sayısı ve hizmet kapsamına göre belirlenir. 
+                            Ücretsiz keşif hizmetimizle size en uygun fiyatı sunuyoruz. WhatsApp veya telefon ile hemen 
+                            fiyat teklifi alabilirsiniz.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ 2 -->
+                <div class="scroll-reveal bg-gray-50 rounded-2xl overflow-hidden border border-gray-200">
+                    <button class="accordion-btn w-full text-left px-6 py-5 flex items-center justify-between hover:bg-gray-100 transition">
+                        <span class="font-semibold text-lg text-navy">Eşyalarım sigorta kapsamında mı?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-navy transition-transform"></i>
+                    </button>
+                    <div class="accordion-content px-6 pb-5">
+                        <p class="text-gray-600 leading-relaxed">
+                            Evet, tüm nakliyat hizmetlerimizde eşyalarınız tam sigorta güvencesi altındadır. 
+                            Olası hasar durumlarında sigorta şirketimiz tazmin işlemlerini gerçekleştirir. 
+                            Güvenliğiniz bizim önceliğimizdir.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ 3 -->
+                <div class="scroll-reveal bg-gray-50 rounded-2xl overflow-hidden border border-gray-200">
+                    <button class="accordion-btn w-full text-left px-6 py-5 flex items-center justify-between hover:bg-gray-100 transition">
+                        <span class="font-semibold text-lg text-navy">Paketleme malzemelerini siz mi sağlıyorsunuz?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-navy transition-transform"></i>
+                    </button>
+                    <div class="accordion-content px-6 pb-5">
+                        <p class="text-gray-600 leading-relaxed">
+                            Evet, tüm paketleme malzemeleri (koli, hava kabarcıklı naylon, streç film, vb.) 
+                            tarafımızdan temin edilir. Profesyonel ekibimiz eşyalarınızı özenle paketleyerek 
+                            güvenli taşımayı sağlar.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ 4 -->
+                <div class="scroll-reveal bg-gray-50 rounded-2xl overflow-hidden border border-gray-200">
+                    <button class="accordion-btn w-full text-left px-6 py-5 flex items-center justify-between hover:bg-gray-100 transition">
+                        <span class="font-semibold text-lg text-navy">Aynı gün nakliyat hizmeti veriyor musunuz?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-navy transition-transform"></i>
+                    </button>
+                    <div class="accordion-content px-6 pb-5">
+                        <p class="text-gray-600 leading-relaxed">
+                            Evet, acil durumlar için aynı gün teslimat hizmetimiz mevcuttur. Müsaitlik durumumuza 
+                            göre aynı gün içinde nakliyat işleminizi gerçekleştirebiliriz. Detaylı bilgi için 
+                            bizimle iletişime geçin.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-br from-navy via-blue-900 to-navy text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="mesh-gradient-1 absolute top-0 right-0 w-96 h-96 bg-amber rounded-full blur-3xl"></div>
+        </div>
+        
+        <div class="container mx-auto px-4 text-center relative z-10 scroll-reveal">
+            <h2 class="text-4xl md:text-5xl font-bold tracking-tight mb-6">Size Özel Ücretsiz Fiyat Teklifi Alın</h2>
+            <p class="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
+                Ev, ofis ya da parça eşya... Neyi taşırsanız taşıyın, önce ücretsiz değerlendirme yapıyoruz. Net fiyat, gizli masraf yok!
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="https://wa.me/905XXXXXXXXX?text=Merhaba,%20nakliyat%20için%20ücretsiz%20fiyat%20teklifi%20almak%20istiyorum." 
+                   target="_blank"
+                   class="shimmer-button pulse-animation text-navy px-10 py-5 rounded-full font-bold text-lg transition flex items-center justify-center gap-3 shadow-2xl">
+                    <i data-lucide="message-circle" class="w-6 h-6"></i>
+                    Hemen Fiyat Teklifi Al
+                </a>
+                
+                <a href="https://wa.me/905XXXXXXXXX?text=Merhaba,%20nakliyat%20hizmetiniz%20hakkında%20detaylı%20bilgi%20almak%20istiyorum." 
+                   target="_blank"
+                   class="bg-white bg-opacity-10 backdrop-blur-sm border-2 border-white text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-opacity-20 transition flex items-center justify-center gap-3">
+                    <i data-lucide="message-square" class="w-6 h-6"></i>
+                    WhatsApp'tan Detay Sor
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schema.org LocalBusiness Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MovingCompany",
+      "name": "Keske Nakliyat",
+      "image": "https://www.keskenakliyat.com/logo.png",
+      "@id": "https://www.keskenakliyat.com",
+      "url": "https://www.keskenakliyat.com",
+      "telephone": "+905XXXXXXXXX",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Adresiniz",
+        "addressLocality": "İstanbul",
+        "postalCode": "34000",
+        "addressCountry": "TR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 41.0082,
+        "longitude": 28.9784
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "opens": "00:00",
+        "closes": "23:59"
+      },
+      "sameAs": [
+        "https://www.facebook.com/keskenakliyat",
+        "https://www.instagram.com/keskenakliyat",
+        "https://www.twitter.com/keskenakliyat"
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "250"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Nakliyat Hizmetleri",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Evden Eve Nakliyat",
+              "description": "Profesyonel paketleme ve sigortalı taşıma hizmeti"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Ofis Taşıma",
+              "description": "Kurumsal ofis taşıma ve kurulum hizmeti"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Parça Eşya Taşıma",
+              "description": "Ekonomik parça eşya nakliyat hizmeti"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Şehirler Arası Nakliyat",
+              "description": "Türkiye geneli güvenli taşımacılık"
+            }
+          }
+        ]
+      }
+    }
+    </script>
+
+    <!-- Footer -->
+    <footer class="bg-navy text-white py-12" role="contentinfo">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <!-- Company Info -->
+                <div class="md:col-span-2">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-10 h-10 bg-amber rounded-lg flex items-center justify-center">
+                            <i data-lucide="truck" class="text-navy w-6 h-6"></i>
+                        </div>
+                        <span class="text-2xl font-bold">Keske <span class="text-amber">Nakliyat</span></span>
+                    </div>
+                    <p class="text-gray-400 mb-4">
+                        Güvenilir, hızlı ve profesyonel nakliyat hizmetleri. 
+                        15 yıllık tecrübemizle eşyalarınızı güvenle taşıyoruz.
+                    </p>
+                    <div class="flex gap-3">
+                        <a href="#" class="w-10 h-10 bg-white bg-opacity-10 rounded-lg flex items-center justify-center hover:bg-amber transition">
+                            <i data-lucide="facebook" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white bg-opacity-10 rounded-lg flex items-center justify-center hover:bg-amber transition">
+                            <i data-lucide="instagram" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white bg-opacity-10 rounded-lg flex items-center justify-center hover:bg-amber transition">
+                            <i data-lucide="twitter" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Hızlı Linkler</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#anasayfa" class="text-gray-400 hover:text-amber transition">Anasayfa</a></li>
+                        <li><a href="#hizmetler" class="text-gray-400 hover:text-amber transition">Hizmetler</a></li>
+                        <li><a href="#neden-biz" class="text-gray-400 hover:text-amber transition">Neden Biz?</a></li>
+                        <li><a href="#sss" class="text-gray-400 hover:text-amber transition">S.S.S</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="text-lg font-bold mb-4">İletişim</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="phone" class="w-5 h-5 text-amber mt-0.5"></i>
+                            <a href="tel:+905XXXXXXXXX" class="text-gray-400 hover:text-amber transition">+90 5XX XXX XX XX</a>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="mail" class="w-5 h-5 text-amber mt-0.5"></i>
+                            <a href="mailto:info@keskenakliyat.com" class="text-gray-400 hover:text-amber transition">info@keskenakliyat.com</a>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="map-pin" class="w-5 h-5 text-amber mt-0.5"></i>
+                            <span class="text-gray-400">İstanbul, Türkiye</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Keske Nakliyat. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Bottom Fixed Bar -->
+    <div class="mobile-bottom-bar fixed bottom-0 left-0 right-0 bg-white md:hidden z-[60] grid grid-cols-2 gap-2 p-3" role="navigation" aria-label="Hızlı İletişim">
+        <a href="tel:+905XXXXXXXXX" 
+           class="bg-navy text-white py-4 rounded-xl font-bold flex items-center justify-center gap-2 active:scale-95 transition">
+            <i data-lucide="phone" class="w-5 h-5"></i>
+            Hemen Ara
+        </a>
+        <a href="https://wa.me/905XXXXXXXXX?text=Merhaba,%20nakliyat%20hizmeti%20hakkında%20bilgi%20almak%20istiyorum." 
+           target="_blank"
+           class="bg-amber text-navy py-4 rounded-xl font-bold flex items-center justify-center gap-2 active:scale-95 transition">
+            <i data-lucide="message-circle" class="w-5 h-5"></i>
+            WhatsApp
+        </a>
+    </div>
+
+    <!-- Floating WhatsApp Button (Mobile Only) -->
+    <a href="https://wa.me/905XXXXXXXXX?text=Merhaba,%20nakliyat%20hizmeti%20hakkında%20bilgi%20almak%20istiyorum." 
+       target="_blank"
+       class="floating-whatsapp"
+       aria-label="WhatsApp ile İletişime Geç">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="white" viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+        </svg>
+    </a>
+
+    <!-- Initialize Lucide Icons -->
+    <script>
+        lucide.createIcons();
+        
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            const isHidden = mobileMenu.classList.toggle('hidden');
+            mobileMenuBtn.setAttribute('aria-expanded', !isHidden);
+        });
+        
+        // Close mobile menu when clicking on a link
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+        
+        // Accordion Functionality
+        const accordionBtns = document.querySelectorAll('.accordion-btn');
+        
+        accordionBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const content = btn.nextElementSibling;
+                const icon = btn.querySelector('[data-lucide="chevron-down"]');
+                
+                // Close all other accordions
+                accordionBtns.forEach(otherBtn => {
+                    if (otherBtn !== btn) {
+                        const otherContent = otherBtn.nextElementSibling;
+                        const otherIcon = otherBtn.querySelector('[data-lucide="chevron-down"]');
+                        otherContent.classList.remove('active');
+                        otherIcon.style.transform = 'rotate(0deg)';
+                    }
+                });
+                
+                // Toggle current accordion
+                content.classList.toggle('active');
+                if (content.classList.contains('active')) {
+                    icon.style.transform = 'rotate(180deg)';
+                } else {
+                    icon.style.transform = 'rotate(0deg)';
+                }
+            });
+        });
+        
+        // Smooth scroll offset for fixed header
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const headerOffset = 80;
+                    const elementPosition = target.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // V2 MODERNIZATION - Scroll Reveal Animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                    observer.unobserve(entry.target); // Animasyonu bir kez çalıştır
+                }
+            });
+        }, observerOptions);
+        
+        // Tüm scroll-reveal elementlerini gözlemle
+        document.querySelectorAll('.scroll-reveal').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
