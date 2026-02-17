@@ -296,10 +296,28 @@
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
         
-        .dark-glass-card:hover {
-            background: rgba(245, 158, 11, 1);
+        /* Trust Badge 1 - Sigortalı Taşıma (Amber) */
+        .trust-badge-1:hover {
+            background: rgba(245, 158, 11, 0.95);
             border-color: rgba(251, 191, 36, 0.8);
             transform: translateY(-2px);
+            box-shadow: 0 10px 40px rgba(245, 158, 11, 0.3);
+        }
+        
+        /* Trust Badge 2 - 7/24 Destek (Mavi) */
+        .trust-badge-2:hover {
+            background: rgba(59, 130, 246, 0.95);
+            border-color: rgba(96, 165, 250, 0.8);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 40px rgba(59, 130, 246, 0.3);
+        }
+        
+        /* Trust Badge 3 - Profesyonel Ekip (Yeşil) */
+        .trust-badge-3:hover {
+            background: rgba(16, 185, 129, 0.95);
+            border-color: rgba(52, 211, 153, 0.8);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 40px rgba(16, 185, 129, 0.3);
         }
         
         /* Navbar Text Colors - Always White for Dark Backgrounds */
@@ -426,6 +444,17 @@
             transform: scale(0.98);
         }
         
+        /* Mobile Menu Active Page Indicator */
+        .nav-link-mobile.active {
+            background: rgba(245, 158, 11, 0.12);
+            border-left: 3px solid #F59E0B;
+            padding-left: calc(1rem - 3px); /* Offset border width */
+        }
+        
+        .nav-link-mobile.active i {
+            color: #F59E0B;
+        }
+        
         /* Gradient Text Effect */
         .gradient-text {
             background: linear-gradient(135deg, #F59E0B 0%, #F97316 100%);
@@ -510,9 +539,13 @@
             animation: pulse-subtle 3s ease-in-out infinite;
         }
         
-        /* Mobile Fixed Bottom Bar */
+        /* Mobile Fixed Bottom Bar - Dark Glassmorphism */
         .mobile-bottom-bar {
-            box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(20px) saturate(180%);
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.3);
         }
         
         /* Mobil bottom bar için body padding */
@@ -690,6 +723,7 @@
                 <ul class="hidden md:flex items-center space-x-3 lg:space-x-6">
                     <li><a href="#anasayfa" class="nav-text nav-link hover:text-amber transition font-medium text-sm lg:text-base" data-section="anasayfa">Anasayfa</a></li>
                     <li><a href="#hizmetler" class="nav-text nav-link hover:text-amber transition font-medium text-sm lg:text-base" data-section="hizmetler">Hizmetler</a></li>
+                    <li><a href="#arac-filomuz" class="nav-text nav-link hover:text-amber transition font-medium text-sm lg:text-base" data-section="arac-filomuz">Araç Filomuz</a></li>
                     <li><a href="#neden-biz" class="nav-text nav-link hover:text-amber transition font-medium text-sm lg:text-base" data-section="neden-biz">Neden Biz?</a></li>
                     <li><a href="#sss" class="nav-text nav-link hover:text-amber transition font-medium text-sm lg:text-base" data-section="sss">S.S.S</a></li>
                     <li>
@@ -724,6 +758,12 @@
                         <a href="#hizmetler" class="flex items-center gap-3 text-white text-base font-medium py-3 px-4 rounded-lg hover:bg-white/10 active:bg-amber/20 transition nav-link-mobile" data-section="hizmetler">
                             <i data-lucide="package" class="w-5 h-5"></i>
                             <span>Hizmetler</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#arac-filomuz" class="flex items-center gap-3 text-white text-base font-medium py-3 px-4 rounded-lg hover:bg-white/10 active:bg-amber/20 transition nav-link-mobile" data-section="arac-filomuz">
+                            <i data-lucide="truck" class="w-5 h-5"></i>
+                            <span>Araç Filomuz</span>
                         </a>
                     </li>
                     <li>
@@ -787,7 +827,7 @@
                         <a href="https://wa.me/905514834234?text=Merhaba%2C%20nakliyat%20hizmeti%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." 
                            target="_blank"
                            rel="noopener noreferrer"
-                           class="group shimmer-button text-navy px-8 md:px-10 lg:px-12 py-4 md:py-5 lg:py-6 rounded-2xl font-bold text-base md:text-lg transition-all flex items-center justify-center gap-3 shadow-2xl hover:shadow-amber/30 hover:scale-105">
+                           class="group shimmer-button text-white px-8 md:px-10 lg:px-12 py-4 md:py-5 lg:py-6 rounded-2xl font-bold text-base md:text-lg transition-all flex items-center justify-center gap-3 shadow-2xl hover:shadow-amber/30 hover:scale-105">
                             <i data-lucide="message-circle" class="w-5 h-5 md:w-6 md:h-6 group-hover:scale-110 transition-transform"></i>
                             WhatsApp'tan Fiyat Al
                         </a>
@@ -801,7 +841,7 @@
                     
                     <!-- Premium Trust Badges -->
                     <div class="mt-8 md:mt-10 lg:mt-12 grid grid-cols-1 sm:grid-cols-3 gap-3 md:gap-4">
-                        <div class="group flex items-center gap-3 md:gap-4 dark-glass-card rounded-xl md:rounded-2xl px-4 md:px-5 py-3 md:py-4 cursor-default">
+                        <div class="group flex items-center gap-3 md:gap-4 dark-glass-card trust-badge-1 rounded-xl md:rounded-2xl px-4 md:px-5 py-3 md:py-4 cursor-default">
                             <div class="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-amber to-orange-500 rounded-xl flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all flex-shrink-0 shadow-lg shadow-amber/20">
                                 <i data-lucide="shield-check" class="w-5 h-5 md:w-6 md:h-6 text-white group-hover:text-navy"></i>
                             </div>
@@ -810,7 +850,7 @@
                                 <span class="text-xs md:text-sm text-gray-300 group-hover:text-navy/70">Tam güvence</span>
                             </div>
                         </div>
-                        <div class="group flex items-center gap-3 md:gap-4 dark-glass-card rounded-xl md:rounded-2xl px-4 md:px-5 py-3 md:py-4 cursor-default">
+                        <div class="group flex items-center gap-3 md:gap-4 dark-glass-card trust-badge-2 rounded-xl md:rounded-2xl px-4 md:px-5 py-3 md:py-4 cursor-default">
                             <div class="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all flex-shrink-0 shadow-lg shadow-blue-500/20">
                                 <i data-lucide="clock" class="w-5 h-5 md:w-6 md:h-6 text-white group-hover:text-navy"></i>
                             </div>
@@ -819,7 +859,7 @@
                                 <span class="text-xs md:text-sm text-gray-300 group-hover:text-navy/70">Her zaman yanınızda</span>
                             </div>
                         </div>
-                        <div class="group flex items-center gap-3 md:gap-4 dark-glass-card rounded-xl md:rounded-2xl px-4 md:px-5 py-3 md:py-4 cursor-default">
+                        <div class="group flex items-center gap-3 md:gap-4 dark-glass-card trust-badge-3 rounded-xl md:rounded-2xl px-4 md:px-5 py-3 md:py-4 cursor-default">
                             <div class="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-xl flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all flex-shrink-0 shadow-lg shadow-emerald-500/20">
                                 <i data-lucide="users" class="w-5 h-5 md:w-6 md:h-6 text-white group-hover:text-navy"></i>
                             </div>
@@ -856,7 +896,7 @@
                 <div class="hidden lg:block">
                     <div class="relative">
                         <div class="absolute inset-0 bg-amber rounded-3xl blur-2xl opacity-20"></div>
-                        <img src="https://images.unsplash.com/photo-1464207687429-7505649dae38?w=800&h=600&fit=crop&q=80" 
+                        <img src="images/banner.jpg" 
                              alt="Keske Nakliyat - Modern ve güvenli nakliyat kamyonu, profesyonel taşımacılık hizmeti" 
                              loading="eager"
                              fetchpriority="high"
@@ -965,7 +1005,7 @@
                         <a href="https://wa.me/905514834234?text=Merhaba%2C%20%2AAsans%C3%B6rl%C3%BC%20Evden%20Eve%20Nakliyat%2A%20hizmeti%20hakk%C4%B1nda%20fiyat%20teklifi%20almak%20istiyorum." 
                            target="_blank"
                            rel="noopener noreferrer"
-                           class="inline-block text-center shimmer-button bg-amber text-navy px-6 py-3 md:px-8 md:py-4 rounded-xl font-bold text-sm md:text-base hover:scale-105 transition-all shadow-2xl">
+                           class="inline-block text-center shimmer-button bg-amber text-white px-6 py-3 md:px-8 md:py-4 rounded-xl font-bold text-sm md:text-base hover:scale-105 transition-all shadow-2xl">
                             Hemen Fiyat Al →
                         </a>
                     </div>
@@ -1028,7 +1068,7 @@
                     <a href="https://wa.me/905514834234?text=Merhaba%2C%20%2APar%C3%A7a%20E%C5%9Fya%20%26%20Malzeme%20Ta%C5%9F%C4%B1ma%2A%20hizmeti%20hakk%C4%B1nda%20fiyat%20teklifi%20almak%20istiyorum." 
                        target="_blank"
                        rel="noopener noreferrer"
-                       class="block text-center bg-amber text-navy py-2.5 md:py-3 rounded-xl text-sm md:text-base font-semibold hover:bg-opacity-90 transition">
+                       class="block text-center bg-amber text-white py-2.5 md:py-3 rounded-xl text-sm md:text-base font-semibold hover:bg-opacity-90 transition">
                         Fiyat Al
                     </a>
                 </div>
@@ -1145,7 +1185,7 @@
     </section>
 
     <!-- Fleet Section (Araç Filosu) -->
-    <section class="py-10 md:py-14 lg:py-18 xl:py-20 bg-gradient-to-br from-navy via-slate-800 to-navy relative overflow-hidden">
+    <section id="arac-filomuz" class="py-10 md:py-14 lg:py-18 xl:py-20 bg-gradient-to-br from-navy via-slate-800 to-navy relative overflow-hidden">
         <!-- Decorative Elements -->
         <div class="absolute inset-0 opacity-10">
             <div class="absolute top-0 left-1/4 w-96 h-96 bg-amber rounded-full blur-3xl"></div>
@@ -1287,7 +1327,7 @@
                 <a href="https://wa.me/905514834234?text=Merhaba%2C%20ara%C3%A7%20filonuz%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." 
                    target="_blank"
                    rel="noopener noreferrer"
-                   class="inline-block shimmer-button bg-amber text-navy px-10 py-4 rounded-xl font-bold hover:scale-105 transition-all shadow-2xl">
+                   class="inline-block shimmer-button bg-amber text-white px-10 py-4 rounded-xl font-bold hover:scale-105 transition-all shadow-2xl">
                     Araç Bilgisi Al →
                 </a>
             </div>
@@ -1604,7 +1644,7 @@
                         <a href="https://wa.me/905514834234?text=Merhaba%2C%20nakliyat%20hizmeti%20hakk%C4%B1nda%20soru%20sormak%20istiyorum." 
                            target="_blank"
                            rel="noopener noreferrer"
-                           class="inline-block shimmer-button bg-amber text-navy px-8 py-4 rounded-xl font-bold hover:scale-105 transition-all shadow-2xl">
+                           class="inline-block shimmer-button bg-amber text-white px-8 py-4 rounded-xl font-bold hover:scale-105 transition-all shadow-2xl">
                             WhatsApp'tan Soru Sor →
                         </a>
                     </div>
@@ -1629,7 +1669,7 @@
                 <a href="https://wa.me/905514834234?text=Merhaba%2C%20nakliyat%20i%C3%A7in%20%C3%BCcretsiz%20fiyat%20teklifi%20almak%20istiyorum." 
                    target="_blank"
                    rel="noopener noreferrer"
-                   class="shimmer-button pulse-animation text-navy px-10 py-5 rounded-full font-bold text-lg transition flex items-center justify-center gap-3 shadow-2xl">
+                   class="shimmer-button pulse-animation text-white px-10 py-5 rounded-full font-bold text-lg transition flex items-center justify-center gap-3 shadow-2xl">
                     <i data-lucide="message-circle" class="w-6 h-6"></i>
                     Hemen Fiyat Teklifi Al
                 </a>
@@ -1818,16 +1858,16 @@
     </footer>
 
     <!-- Mobile Bottom Fixed Bar -->
-    <div class="mobile-bottom-bar fixed bottom-0 left-0 right-0 bg-white md:hidden z-[60] grid grid-cols-2 gap-2 p-3" role="navigation" aria-label="Hızlı İletişim">
+    <div class="mobile-bottom-bar fixed bottom-0 left-0 right-0 md:hidden z-[60] grid grid-cols-2 gap-2 p-3" role="navigation" aria-label="Hızlı İletişim">
         <a href="tel:+905514834234" 
-           class="bg-navy text-white py-4 rounded-xl font-bold flex items-center justify-center gap-2 active:scale-95 transition">
+           class="bg-navy text-white py-4 rounded-xl font-bold flex items-center justify-center gap-2 active:scale-95 transition border border-white/20 hover:border-white/40">
             <i data-lucide="phone" class="w-5 h-5"></i>
             Hemen Ara
         </a>
         <a href="https://wa.me/905514834234?text=Merhaba%2C%20nakliyat%20hizmeti%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." 
            target="_blank"
            rel="noopener noreferrer"
-           class="bg-amber text-navy py-4 rounded-xl font-bold flex items-center justify-center gap-2 active:scale-95 transition">
+           class="bg-amber text-white py-4 rounded-xl font-bold flex items-center justify-center gap-2 active:scale-95 transition border border-amber-600/30 hover:border-amber-600/60">
             <i data-lucide="message-circle" class="w-5 h-5"></i>
             WhatsApp
         </a>
@@ -1922,8 +1962,8 @@
         
         // Active Page Indicator - Track scroll position
         function updateActiveNavLink() {
-            const sections = ['anasayfa', 'hizmetler', 'neden-biz', 'sss'];
-            const navLinks = document.querySelectorAll('.nav-link');
+            const sections = ['anasayfa', 'hizmetler', 'arac-filomuz', 'neden-biz', 'sss'];
+            const navLinks = document.querySelectorAll('.nav-link, .nav-link-mobile');
             const scrollPosition = window.scrollY + 100; // Offset for fixed header
             
             let currentSection = 'anasayfa';
@@ -1942,7 +1982,9 @@
             
             // Update active state
             navLinks.forEach(link => {
-                if (link.getAttribute('data-section') === currentSection) {
+                const linkSection = link.getAttribute('data-section');
+                
+                if (linkSection === currentSection) {
                     link.classList.add('active');
                 } else {
                     link.classList.remove('active');
