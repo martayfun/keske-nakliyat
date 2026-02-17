@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Keske Nakliyat - Güvenli, Hızlı ve Profesyonel Evden Eve Nakliyat Hizmetleri. Sigortalı Taşımacılık, 7/24 Destek. Hemen Fiyat Alın!">
-    <meta name="keywords" content="nakliyat, evden eve nakliyat, parça eşya taşıma, ofis taşıma, şehirler arası nakliyat">
+    <meta name="description" content="Keske Nakliyat - 15 yıllık tecrübe ile İstanbul'da güvenilir evden eve nakliyat, asansörlü taşıma, soğuk zincir lojistik ve depolama hizmetleri. Sigortalı taşımacılık, ücretsiz keşif, 7/24 destek. Hemen fiyat alın!">
+    <meta name="keywords" content="evden eve nakliyat, asansörlü taşıma, nakliyat istanbul, ofis taşıma, şehirler arası nakliyat, parça eşya taşıma, soğuk zincir taşımacılık, depolama hizmeti, sigortalı nakliyat">
     <meta name="author" content="Keske Nakliyat">
 
     <!-- ⚠️ GOOGLE INDEXLEME AYARLARI -->
@@ -40,20 +40,23 @@
     <meta name="twitter:description" content="15 yıllık tecrübe ile sigortalı, hızlı ve profesyonel nakliyat hizmetleri. 7/24 Destek.">
     <meta name="twitter:image" content="https://www.keskenakliyat.com/og-image.jpg">
     
-    <!-- Google Analytics (Placeholder) -->
-    <!-- TODO: Google Analytics ID'nizi buraya ekleyin -->
+    <!-- Google Analytics -->
+    <!-- Production'da aktif edilecek: Google Analytics ID'nizi G-XXXXXXXXXX yerine yazın -->
     <!-- 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-XXXXXXXXXX');
+      gtag('config', 'G-XXXXXXXXXX', {
+        'anonymize_ip': true,
+        'cookie_flags': 'SameSite=None;Secure'
+      });
     </script>
     -->
     
-    <!-- Google Ads Conversion Tracking (Placeholder) -->
-    <!-- TODO: Google Ads ID'nizi buraya ekleyin -->
+    <!-- Google Ads Conversion Tracking -->
+    <!-- Production'da aktif edilecek: Google Ads ID'nizi AW-XXXXXXXXX yerine yazın -->
     <!--
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-XXXXXXXXX"></script>
     <script>
@@ -61,31 +64,374 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'AW-XXXXXXXXX');
+      
+      // Conversion tracking example:
+      function gtag_report_conversion(url) {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-XXXXXXXXX/YYYYYYYYYY',
+          'event_callback': function () {
+            if (typeof(url) != 'undefined') {
+              window.location = url;
+            }
+          }
+        });
+        return false;
+      }
     </script>
     -->
     
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'navy': '#0F172A',
+                        'slate-950': '#020617',
+                        'amber': '#F59E0B',
+                        'amber-600': '#D97706',
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'sans-serif'],
+                    },
+                    backgroundImage: {
+                        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+                        'amber-glow': 'linear-gradient(135deg, #F59E0B 0%, #F97316 100%)',
+                    },
+                },
+            },
+        }
+    </script>
+    
     <!-- Google Fonts - Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     
     <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/lucide@0.321.0"></script>
+    
+    <!-- Structured Data (Schema.org) for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MovingCompany",
+      "name": "Keske Nakliyat",
+      "description": "Profesyonel evden eve nakliyat, asansörlü taşıma, ofis taşıma ve soğuk zincir taşımacılık hizmetleri",
+      "url": "https://www.keskenakliyat.com",
+      "logo": "https://www.keskenakliyat.com/logo.png",
+      "image": "https://www.keskenakliyat.com/og-image.jpg",
+      "telephone": "+90-551-483-4234",
+      "email": "info@keskenakliyat.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "[Adres Bilgisi]",
+        "addressLocality": "İstanbul",
+        "addressRegion": "İstanbul",
+        "postalCode": "XXXXX",
+        "addressCountry": "TR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "41.0082",
+        "longitude": "28.9784"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "opens": "00:00",
+        "closes": "23:59"
+      },
+      "priceRange": "$$",
+      "areaServed": {
+        "@type": "Country",
+        "name": "Türkiye"
+      },
+      "sameAs": [
+        "https://www.facebook.com/keskenakliyat",
+        "https://www.instagram.com/keskenakliyat",
+        "https://twitter.com/keskenakliyat"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Nakliyat Hizmetleri",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Evden Eve Nakliyat",
+              "description": "Profesyonel paketleme ve asansörlü taşıma ile güvenli evden eve nakliyat"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Ofis Taşıma",
+              "description": "İş yerinizi minimum kesinti ile yeni adresinize taşıyoruz"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Soğuk Zincir Taşımacılık",
+              "description": "Sıcaklık kontrollü frigolu araçlarla gıda ve ilaç taşımacılığı"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Depolama Hizmeti",
+              "description": "Güvenli ve sigortalı depolama alanları"
+            }
+          }
+        ]
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "850",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    }
+    </script>
     
     <style>
         * {
             font-family: 'Inter', sans-serif;
         }
         
-        /* Glassmorphism Header */
+        /* Skip to Content Link - Accessibility */
+        .skip-to-content {
+            position: absolute;
+            top: -100px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 9999;
+            padding: 12px 24px;
+            background: #F59E0B;
+            color: #0F172A;
+            font-weight: bold;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: top 0.3s ease;
+        }
+        
+        .skip-to-content:focus {
+            top: 20px;
+        }
+        
+        /* Enhanced Focus States for Accessibility */
+        *:focus-visible {
+            outline: 3px solid #F59E0B;
+            outline-offset: 2px;
+            border-radius: 4px;
+        }
+        
+        button:focus-visible,
+        a:focus-visible {
+            outline: 3px solid #F59E0B;
+            outline-offset: 2px;
+        }
+        
+        /* Respect User Motion Preferences */
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+        
+        /* Modern Premium Dark Glassmorphism Navbar */
         .glass-header {
-            background: rgba(255, 255, 255, 0.85);
+            background: rgba(15, 23, 42, 0.3);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+            will-change: background, border-color;
+        }
+        
+        .glass-header.scrolled {
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(20px) saturate(180%);
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Premium Card Styles - Subtle & Cohesive */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+        }
+        
+        /* Dark Glass Cards for Hero Section */
+        .dark-glass-card {
+            background: rgba(30, 41, 59, 0.4);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .dark-glass-card:hover {
+            background: rgba(245, 158, 11, 1);
+            border-color: rgba(251, 191, 36, 0.8);
+            transform: translateY(-2px);
+        }
+        
+        /* Navbar Text Colors - Always White for Dark Backgrounds */
+        .glass-header .nav-text {
+            color: #ffffff;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+        
+        .glass-header .nav-text:hover {
+            color: #f59e0b;
+        }
+        
+        /* Active Page Indicator */
+        .glass-header .nav-text.active {
+            color: #f59e0b;
+        }
+        
+        .glass-header .nav-text.active::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #F59E0B, #F97316);
+            border-radius: 2px;
+        }
+        
+        /* Hamburger Menu Animation */
+        #mobile-menu-btn {
+            position: relative;
+            width: 32px;
+            height: 32px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+        }
+        
+        .hamburger-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 24px;
+            height: 2px;
+            background: white;
+            transition: all 0.3s ease;
+            display: block;
+        }
+        
+        .hamburger-icon::before,
+        .hamburger-icon::after {
+            content: '';
+            position: absolute;
+            width: 24px;
+            height: 2px;
+            background: white;
+            transition: all 0.3s ease;
+        }
+        
+        .hamburger-icon::before {
+            top: -7px;
+        }
+        
+        .hamburger-icon::after {
+            bottom: -7px;
+        }
+        
+        .hamburger-icon.open {
+            background: transparent;
+        }
+        
+        .hamburger-icon.open::before {
+            top: 0;
+            transform: rotate(45deg);
+        }
+        
+        .hamburger-icon.open::after {
+            bottom: 0;
+            transform: rotate(-45deg);
+        }
+        
+        /* Modern Full-Screen Mobile Menu */
+        #mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+            opacity: 0;
+            background: rgba(15, 23, 42, 0.98);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        #mobile-menu.show {
+            max-height: 400px;
+            opacity: 1;
+        }
+        
+        #mobile-menu .menu-content {
+            padding: 0.5rem 0;
+        }
+        
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        #mobile-menu a {
+            transition: all 0.2s ease;
+        }
+        
+        #mobile-menu a:active {
+            background: rgba(245, 158, 11, 0.15);
+            transform: scale(0.98);
+        }
+        
+        /* Gradient Text Effect */
+        .gradient-text {
+            background: linear-gradient(135deg, #F59E0B 0%, #F97316 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
         
         /* Smooth Scroll */
@@ -123,15 +469,45 @@
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
         }
         
-        /* Accordion */
-        .accordion-content {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease;
+        /* Modern Accordion with Grid */
+        .accordion-item {
+            display: grid;
+            grid-template-rows: auto 0fr;
+            transition: grid-template-rows 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
         
-        .accordion-content.active {
-            max-height: 500px;
+        .accordion-item.active {
+            grid-template-rows: auto 1fr;
+        }
+        
+        .accordion-content {
+            overflow: hidden;
+        }
+        
+        .accordion-inner {
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+        
+        .accordion-item.active .accordion-inner {
+            opacity: 1;
+            transform: translateY(0);
+            transition-delay: 0.1s;
+        }
+        
+        .faq-number {
+            background: linear-gradient(135deg, rgba(245, 158, 11, 0.1) 0%, rgba(245, 158, 11, 0.05) 100%);
+            animation: pulse-subtle 3s ease-in-out infinite;
+        }
+        
+        @keyframes pulse-subtle {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        .animate-pulse-subtle {
+            animation: pulse-subtle 3s ease-in-out infinite;
         }
         
         /* Mobile Fixed Bottom Bar */
@@ -184,7 +560,7 @@
             background: rgba(255, 255, 255, 0.95);
         }
         
-        /* Shimmer Button Effect */
+        /* Shimmer Button Effect - PREMIUM */
         @keyframes shimmer {
             0% {
                 background-position: -200% center;
@@ -195,13 +571,31 @@
         }
         
         .shimmer-button {
-            background: linear-gradient(90deg, #f59e0b 0%, #fbbf24 50%, #f59e0b 100%);
-            background-size: 200% auto;
-            transition: all 0.3s ease;
+            background: linear-gradient(135deg, #F59E0B 0%, #F97316 50%, #FB923C 100%);
+            background-size: 200% 100%;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .shimmer-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            transition: left 0.6s;
         }
         
         .shimmer-button:hover {
-            animation: shimmer 1.5s linear infinite;
+            animation: shimmer 2s ease-in-out infinite;
+            box-shadow: 0 20px 40px rgba(245, 158, 11, 0.4), 0 0 60px rgba(245, 158, 11, 0.2);
+        }
+        
+        .shimmer-button:hover::before {
+            left: 100%;
         }
         
         /* Icon Halo Effect */
@@ -272,130 +666,200 @@
             }
         }
     </style>
-    
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        navy: '#1e293b',
-                        amber: '#f59e0b',
-                    }
-                }
-            }
-        }
-    </script>
 </head>
 <body class="bg-gray-50 text-gray-900">
 
+    <!-- Skip to Content Link for Keyboard Users -->
+    <a href="#main-content" class="skip-to-content">Ana içeriğe geç</a>
+
     <!-- Sticky Glassmorphism Header -->
     <header class="glass-header fixed top-0 left-0 right-0 z-50" role="banner">
-        <nav class="container mx-auto px-4 py-4">
+        <nav class="container mx-auto px-4 md:px-6 lg:px-8 py-3 md:py-4">
             <div class="flex items-center justify-between">
                 <!-- Logo -->
-                <a href="#anasayfa" class="flex items-center space-x-2">
-                    <div class="w-10 h-10 bg-gradient-to-br from-navy to-blue-900 rounded-lg flex items-center justify-center">
-                        <i data-lucide="truck" class="text-white w-6 h-6"></i>
+                <a href="#anasayfa" class="flex items-center space-x-2 group" style="will-change: transform;">
+                    <div class="w-9 h-9 md:w-10 md:h-10 bg-gradient-to-br from-navy to-blue-900 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform" style="will-change: transform;">
+                        <i data-lucide="truck" class="text-white w-5 h-5 md:w-6 md:h-6"></i>
                     </div>
-                    <span class="text-2xl font-bold text-navy">Keske <span class="text-amber">Nakliyat</span></span>
+                    <span class="text-xl md:text-2xl font-bold" style="will-change: auto;">
+                        <span class="text-white">Keske</span> <span class="text-amber">Nakliyat</span>
+                    </span>
                 </a>
                 
                 <!-- Desktop Menu -->
-                <ul class="hidden md:flex items-center space-x-8">
-                    <li><a href="#anasayfa" class="text-navy hover:text-amber transition font-medium">Anasayfa</a></li>
-                    <li><a href="#hizmetler" class="text-navy hover:text-amber transition font-medium">Hizmetler</a></li>
-                    <li><a href="#neden-biz" class="text-navy hover:text-amber transition font-medium">Neden Biz?</a></li>
-                    <li><a href="#sss" class="text-navy hover:text-amber transition font-medium">S.S.S</a></li>
+                <ul class="hidden md:flex items-center space-x-3 lg:space-x-6">
+                    <li><a href="#anasayfa" class="nav-text nav-link hover:text-amber transition font-medium text-sm lg:text-base" data-section="anasayfa">Anasayfa</a></li>
+                    <li><a href="#hizmetler" class="nav-text nav-link hover:text-amber transition font-medium text-sm lg:text-base" data-section="hizmetler">Hizmetler</a></li>
+                    <li><a href="#neden-biz" class="nav-text nav-link hover:text-amber transition font-medium text-sm lg:text-base" data-section="neden-biz">Neden Biz?</a></li>
+                    <li><a href="#sss" class="nav-text nav-link hover:text-amber transition font-medium text-sm lg:text-base" data-section="sss">S.S.S</a></li>
                     <li>
-                        <a href="tel:+905514834234" class="bg-navy text-white px-6 py-2.5 rounded-full hover:bg-opacity-90 transition font-semibold flex items-center gap-2">
+                        <a href="tel:+905514834234" class="bg-gradient-to-r from-amber to-orange-500 text-white px-4 py-2 md:px-5 md:py-2.5 lg:px-6 rounded-full hover:shadow-lg hover:shadow-amber/30 hover:scale-105 transition-all font-semibold flex items-center gap-2 text-sm lg:text-base">
                             <i data-lucide="phone" class="w-4 h-4"></i>
-                            Hemen Ara
+                            <span class="hidden lg:inline">Hemen Ara</span>
+                            <span class="lg:hidden">Ara</span>
                         </a>
                     </li>
                 </ul>
                 
                 <!-- Mobile Menu Button -->
-                <button id="mobile-menu-btn" class="md:hidden text-navy" aria-label="Menüyü Aç/Kapat" aria-expanded="false" aria-controls="mobile-menu">
-                    <i data-lucide="menu" class="w-7 h-7"></i>
+                <button id="mobile-menu-btn" class="md:hidden" aria-label="Menüyü Aç/Kapat" aria-expanded="false" aria-controls="mobile-menu">
+                    <span class="hamburger-icon"></span>
                 </button>
-            </div>
-            
-            <!-- Mobile Menu -->
-            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4" role="navigation" aria-label="Mobil Menü">
-                <ul class="flex flex-col space-y-3">
-                    <li><a href="#anasayfa" class="block text-navy hover:text-amber transition font-medium py-2">Anasayfa</a></li>
-                    <li><a href="#hizmetler" class="block text-navy hover:text-amber transition font-medium py-2">Hizmetler</a></li>
-                    <li><a href="#neden-biz" class="block text-navy hover:text-amber transition font-medium py-2">Neden Biz?</a></li>
-                    <li><a href="#sss" class="block text-navy hover:text-amber transition font-medium py-2">S.S.S</a></li>
-                </ul>
             </div>
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section id="anasayfa" class="pt-32 pb-20 bg-gradient-to-br from-navy via-blue-900 to-navy text-white relative overflow-hidden">
-        <!-- Background Pattern with Animated Mesh Gradient -->
-        <div class="absolute inset-0 opacity-10">
-            <div class="mesh-gradient-1 absolute top-0 left-0 w-96 h-96 bg-amber rounded-full blur-3xl"></div>
-            <div class="mesh-gradient-2 absolute bottom-0 right-0 w-96 h-96 bg-blue-500 rounded-full blur-3xl"></div>
-            <div class="mesh-gradient-1 absolute top-1/2 left-1/2 w-64 h-64 bg-purple-500 rounded-full blur-3xl" style="animation-delay: 2s;"></div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden fixed left-0 right-0 z-40" style="top: 60px;" role="navigation" aria-label="Mobil Menü">
+        <div class="menu-content">
+            <div class="container mx-auto px-4">
+                <ul class="flex flex-col space-y-2 py-3">
+                    <li>
+                        <a href="#anasayfa" class="flex items-center gap-3 text-white text-base font-medium py-3 px-4 rounded-lg hover:bg-white/10 active:bg-amber/20 transition nav-link-mobile" data-section="anasayfa">
+                            <i data-lucide="home" class="w-5 h-5"></i>
+                            <span>Anasayfa</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#hizmetler" class="flex items-center gap-3 text-white text-base font-medium py-3 px-4 rounded-lg hover:bg-white/10 active:bg-amber/20 transition nav-link-mobile" data-section="hizmetler">
+                            <i data-lucide="package" class="w-5 h-5"></i>
+                            <span>Hizmetler</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#neden-biz" class="flex items-center gap-3 text-white text-base font-medium py-3 px-4 rounded-lg hover:bg-white/10 active:bg-amber/20 transition nav-link-mobile" data-section="neden-biz">
+                            <i data-lucide="star" class="w-5 h-5"></i>
+                            <span>Neden Biz?</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#sss" class="flex items-center gap-3 text-white text-base font-medium py-3 px-4 rounded-lg hover:bg-white/10 active:bg-amber/20 transition nav-link-mobile" data-section="sss">
+                            <i data-lucide="help-circle" class="w-5 h-5"></i>
+                            <span>S.S.S</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section - PREMIUM REDESIGN -->
+    <section id="anasayfa" class="pt-28 md:pt-36 lg:pt-40 xl:pt-44 pb-12 md:pb-16 lg:pb-20 xl:pb-24 bg-gradient-to-br from-slate-950 via-navy to-slate-900 text-white relative overflow-hidden">
+        <!-- Main Content Anchor for Skip Link -->
+        <div id="main-content"></div>
+        <!-- Premium Background Pattern with Enhanced Mesh Gradient -->
+        <div class="absolute inset-0 opacity-20">
+            <div class="mesh-gradient-1 absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-amber to-orange-500 rounded-full blur-3xl"></div>
+            <div class="mesh-gradient-2 absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-full blur-3xl"></div>
+            <div class="mesh-gradient-1 absolute top-1/2 left-1/2 w-80 h-80 bg-gradient-to-br from-purple-600 to-pink-500 rounded-full blur-3xl" style="animation-delay: 2s;"></div>
         </div>
         
-        <div class="container mx-auto px-4 relative z-10">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
+        <!-- Subtle Grid Pattern Overlay -->
+        <div class="absolute inset-0 opacity-5" style="background-image: linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px); background-size: 50px 50px;"></div>
+        
+        <div class="container mx-auto px-4 md:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
                 <!-- Left Content -->
-                <div>
-                    <div class="inline-block bg-amber bg-opacity-20 border border-amber rounded-full px-4 py-2 mb-6">
-                        <span class="text-amber font-semibold text-sm">✨ Güvenli & Profesyonel Taşımacılık</span>
+                <div class="space-y-6 md:space-y-8">
+                    <!-- Premium Badge -->
+                    <div class="inline-flex items-center gap-2 bg-gradient-to-r from-amber/20 via-orange-500/20 to-amber/20 border border-amber/40 rounded-full px-6 py-3 backdrop-blur-sm animate-pulse-subtle shadow-lg shadow-amber/10">
+                        <svg class="w-5 h-5 text-amber" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                        <span class="bg-gradient-to-r from-amber via-orange-400 to-amber bg-clip-text text-transparent font-bold text-sm sm:text-base tracking-wide">
+                            15 Yıllık Tecrübe • 10K+ Mutlu Müşteri
+                        </span>
+                        </span>
                     </div>
                     
-                    <h1 class="text-5xl md:text-6xl font-bold leading-tight tracking-tight mb-6">
-                        Keske Nakliyat ile <span class="text-amber">Güvenle Taşının</span>
+                    <!-- Premium Headline -->
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-tight tracking-tight">
+                        Keske Nakliyat ile <span class="bg-gradient-to-r from-amber via-orange-400 to-amber bg-clip-text text-transparent">Güvenle Taşının</span>
                     </h1>
                     
-                    <p class="text-xl text-gray-300 mb-8 leading-relaxed">
-                        Evden eve, ofis taşıma ve parça eşya nakliyatında 15 yıllık tecrübe. Sigortalı, hızlı ve ekonomik çözümler.
+                    <!-- Enhanced Description -->
+                    <p class="text-base md:text-lg lg:text-xl xl:text-2xl text-gray-200 leading-relaxed max-w-2xl">
+                        Evden eve, ofis taşıma ve parça eşya nakliyatında <span class="font-bold text-white">15 yıllık tecrübe</span>. Sigortalı, hızlı ve ekonomik çözümler.
                     </p>
                     
-                    <div class="flex flex-col sm:flex-row gap-4">
+                    <!-- Premium CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-3 md:gap-4">
                         <a href="https://wa.me/905514834234?text=Merhaba%2C%20nakliyat%20hizmeti%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." 
                            target="_blank"
-                           class="shimmer-button pulse-animation text-navy px-8 py-4 rounded-full font-bold text-lg transition flex items-center justify-center gap-3 shadow-2xl">
-                            <i data-lucide="message-circle" class="w-6 h-6"></i>
+                           rel="noopener noreferrer"
+                           class="group shimmer-button text-navy px-8 md:px-10 lg:px-12 py-4 md:py-5 lg:py-6 rounded-2xl font-bold text-base md:text-lg transition-all flex items-center justify-center gap-3 shadow-2xl hover:shadow-amber/30 hover:scale-105">
+                            <i data-lucide="message-circle" class="w-5 h-5 md:w-6 md:h-6 group-hover:scale-110 transition-transform"></i>
                             WhatsApp'tan Fiyat Al
                         </a>
                         
                         <a href="tel:+905514834234" 
-                           class="bg-white bg-opacity-10 backdrop-blur-sm border-2 border-white text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-opacity-20 transition flex items-center justify-center gap-3">
-                            <i data-lucide="phone" class="w-6 h-6"></i>
+                           class="group bg-white/5 backdrop-blur-md border-2 border-white/30 hover:border-white/60 text-white px-8 md:px-10 py-4 md:py-5 lg:py-6 rounded-2xl font-bold text-base md:text-lg hover:bg-white/10 hover:scale-105 transition-all flex items-center justify-center gap-3 shadow-xl hover:shadow-2xl">
+                            <i data-lucide="phone" class="w-5 h-5 md:w-6 md:h-6 group-hover:rotate-12 transition-transform"></i>
                             Hemen Ara
                         </a>
                     </div>
                     
-                    <!-- Trust Badges -->
-                    <div class="mt-12 flex flex-wrap gap-6 items-center">
-                        <div class="flex items-center gap-2">
-                            <i data-lucide="shield-check" class="w-5 h-5 text-amber"></i>
-                            <span class="text-sm">Sigortalı Taşıma</span>
+                    <!-- Premium Trust Badges -->
+                    <div class="mt-8 md:mt-10 lg:mt-12 grid grid-cols-1 sm:grid-cols-3 gap-3 md:gap-4">
+                        <div class="group flex items-center gap-3 md:gap-4 dark-glass-card rounded-xl md:rounded-2xl px-4 md:px-5 py-3 md:py-4 cursor-default">
+                            <div class="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-amber to-orange-500 rounded-xl flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all flex-shrink-0 shadow-lg shadow-amber/20">
+                                <i data-lucide="shield-check" class="w-5 h-5 md:w-6 md:h-6 text-white group-hover:text-navy"></i>
+                            </div>
+                            <div>
+                                <span class="text-sm md:text-base font-bold block text-white group-hover:text-navy">Sigortalı Taşıma</span>
+                                <span class="text-xs md:text-sm text-gray-300 group-hover:text-navy/70">Tam güvence</span>
+                            </div>
                         </div>
-                        <div class="flex items-center gap-2">
-                            <i data-lucide="clock" class="w-5 h-5 text-amber"></i>
-                            <span class="text-sm">7/24 Destek</span>
+                        <div class="group flex items-center gap-3 md:gap-4 dark-glass-card rounded-xl md:rounded-2xl px-4 md:px-5 py-3 md:py-4 cursor-default">
+                            <div class="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all flex-shrink-0 shadow-lg shadow-blue-500/20">
+                                <i data-lucide="clock" class="w-5 h-5 md:w-6 md:h-6 text-white group-hover:text-navy"></i>
+                            </div>
+                            <div>
+                                <span class="text-sm md:text-base font-bold block text-white group-hover:text-navy">7/24 Destek</span>
+                                <span class="text-xs md:text-sm text-gray-300 group-hover:text-navy/70">Her zaman yanınızda</span>
+                            </div>
                         </div>
-                        <div class="flex items-center gap-2">
-                            <i data-lucide="users" class="w-5 h-5 text-amber"></i>
-                            <span class="text-sm">Profesyonel Ekip</span>
+                        <div class="group flex items-center gap-3 md:gap-4 dark-glass-card rounded-xl md:rounded-2xl px-4 md:px-5 py-3 md:py-4 cursor-default">
+                            <div class="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-xl flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all flex-shrink-0 shadow-lg shadow-emerald-500/20">
+                                <i data-lucide="users" class="w-5 h-5 md:w-6 md:h-6 text-white group-hover:text-navy"></i>
+                            </div>
+                            <div>
+                                <span class="text-sm md:text-base font-bold block text-white group-hover:text-navy">Profesyonel Ekip</span>
+                                <span class="text-xs md:text-sm text-gray-300 group-hover:text-navy/70">Uzman kadro</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Premium Social Proof Stats -->
+                    <div class="mt-8 md:mt-10 pt-6 md:pt-8 border-t border-white/20 grid grid-cols-3 gap-4 md:gap-6">
+                        <div class="text-center sm:text-left group cursor-default">
+                            <div class="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-extrabold bg-gradient-to-r from-amber via-orange-400 to-amber bg-clip-text text-transparent mb-1 md:mb-2 group-hover:scale-110 transition-transform inline-block">4.9/5</div>
+                            <div class="text-xs md:text-sm lg:text-base text-gray-300 flex items-center justify-center sm:justify-start gap-1">
+                                <svg class="w-4 h-4 md:w-5 md:h-5 text-amber fill-current" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                </svg>
+                                <span class="hidden sm:inline font-medium">Müşteri Memnuniyeti</span>
+                            </div>
+                        </div>
+                        <div class="text-center sm:text-left group cursor-default">
+                            <div class="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-extrabold bg-gradient-to-r from-amber via-orange-400 to-amber bg-clip-text text-transparent mb-1 md:mb-2 group-hover:scale-110 transition-transform inline-block">10K+</div>
+                            <div class="text-xs md:text-sm lg:text-base text-gray-300 font-medium">Başarılı Taşınma</div>
+                        </div>
+                        <div class="text-center sm:text-left group cursor-default">
+                            <div class="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-extrabold bg-gradient-to-r from-amber via-orange-400 to-amber bg-clip-text text-transparent mb-1 md:mb-2 group-hover:scale-110 transition-transform inline-block">50+</div>
+                            <div class="text-xs md:text-sm lg:text-base text-gray-300 font-medium">Profesyonel Personel</div>
                         </div>
                     </div>
                 </div>
                 
                 <!-- Right Image -->
-                <div class="hidden md:block">
+                <div class="hidden lg:block">
                     <div class="relative">
                         <div class="absolute inset-0 bg-amber rounded-3xl blur-2xl opacity-20"></div>
                         <img src="https://images.unsplash.com/photo-1464207687429-7505649dae38?w=800&h=600&fit=crop&q=80" 
-                             alt="Keske Nakliyat - Modern ve Güvenli Nakliyat Kamyonu" 
-                             loading="lazy"
+                             alt="Keske Nakliyat - Modern ve güvenli nakliyat kamyonu, profesyonel taşımacılık hizmeti" 
+                             loading="eager"
+                             fetchpriority="high"
                              width="800"
                              height="600"
                              class="relative rounded-3xl shadow-2xl w-full h-auto">
@@ -403,344 +867,746 @@
                 </div>
             </div>
         </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="relative mt-4 hidden lg:block">
+            <div class="flex justify-center animate-bounce">
+                <a href="#hizmetler" class="flex flex-col items-center gap-2 text-white hover:text-amber transition-colors" aria-label="Aşağı Kaydır">
+                    <span class="text-xs font-medium tracking-wide uppercase">Daha Fazla Keşfet</span>
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="hizmetler" class="py-20 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16 scroll-reveal">
-                <h2 class="text-4xl md:text-5xl font-bold tracking-tight text-navy mb-4">Hizmetlerimiz</h2>
-                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+    <!-- Services Section - PREMIUM DESIGN -->
+    <section id="hizmetler" class="py-12 md:py-16 lg:py-24 xl:py-32 bg-gradient-to-br from-slate-50 via-white to-blue-50 relative overflow-hidden">
+        <!-- Subtle Background Pattern -->
+        <div class="absolute inset-0 opacity-30">
+            <div class="absolute top-20 right-20 w-96 h-96 bg-gradient-to-br from-amber/20 to-orange-500/20 rounded-full blur-3xl animate-pulse-subtle"></div>
+            <div class="absolute bottom-20 left-20 w-96 h-96 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-full blur-3xl animate-pulse-subtle" style="animation-delay: 1s;"></div>
+        </div>
+        
+        <div class="container mx-auto px-4 md:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-10 md:mb-14 lg:mb-16 xl:mb-20 scroll-reveal">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold tracking-tight text-navy mb-3 md:mb-4 lg:mb-6">Hizmetlerimiz</h2>
+                <p class="text-base md:text-lg lg:text-xl xl:text-2xl text-gray-600 max-w-3xl mx-auto font-medium">
                     İhtiyacınıza özel profesyonel nakliyat çözümleri
                 </p>
             </div>
             
-            <!-- Bento Grid Services -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- Service 1 - Featured (2x2 Bento) -->
-                <div class="scroll-reveal card-hover glass-card lg:col-span-2 lg:row-span-2 rounded-2xl p-10 border border-gray-200 shadow-lg relative overflow-hidden flex flex-col">
-                    <div class="absolute top-0 right-0 w-64 h-64 bg-amber opacity-5 rounded-full blur-3xl"></div>
-                    <div class="relative z-10 flex-1 flex flex-col">
-                        <div class="icon-halo w-20 h-20 bg-gradient-to-br from-amber to-orange-600 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
-                            <i data-lucide="home" class="w-10 h-10 text-white"></i>
+            <!-- Premium Bento Grid Services -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8 max-w-7xl mx-auto">
+                <!-- Service 1 - Featured Premium Card (Evden Eve) -->
+                <div class="group scroll-reveal card-hover glass-card sm:col-span-2 lg:row-span-2 rounded-2xl md:rounded-3xl p-8 md:p-10 lg:p-12 border border-white/10 shadow-2xl shadow-slate-900/50 hover:shadow-3xl bg-gradient-to-br from-slate-950 via-navy to-slate-900 relative overflow-hidden transition-all duration-500">
+                    <!-- Premium Decorative Mesh Gradient -->
+                    <div class="absolute inset-0 opacity-20">
+                        <div class="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-amber to-orange-500 rounded-full blur-3xl group-hover:scale-110 transition-transform duration-700"></div>
+                        <div class="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-full blur-3xl group-hover:scale-110 transition-transform duration-700"></div>
+                    </div>
+                    
+                    <div class="relative z-10 flex flex-col h-full">
+                        <div class="w-16 h-16 md:w-24 md:h-24 bg-gradient-to-br from-amber via-orange-500 to-amber rounded-2xl md:rounded-3xl flex items-center justify-center mb-6 md:mb-8 shadow-2xl shadow-amber/30 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500">
+                            <i data-lucide="home" class="w-8 h-8 md:w-12 md:h-12 text-white"></i>
                         </div>
-                        <h3 class="text-3xl font-bold tracking-tight text-navy mb-4">Evden Eve Nakliyat</h3>
-                        <p class="text-gray-600 text-lg mb-6 leading-relaxed">
-                            15 yıllık tecrübemizle ev eşyalarınızı özenle paketleyip, yeni adresinize hasar almadan güvenle taşıyoruz. Profesyonel ekibimiz ve modern araçlarımızla taşınma stresini ortadan kaldırıyoruz.
+                        <h3 class="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-white mb-3 md:mb-4">Evden Eve Nakliyat</h3>
+                        <p class="text-gray-300 text-sm sm:text-base lg:text-lg mb-4 md:mb-5 lg:mb-6 leading-relaxed">
+                            15 yıllık tecrübemizle ev eşyalarınızı <span class="text-amber font-semibold">profesyonel paketleme malzemeleri</span> ile özenle koruyup, <span class="text-amber font-semibold">asansörlü taşıma sistemleri</span> ile yeni adresinize güvenle taşıyoruz.
                         </p>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8 flex-1">
-                            <div class="flex items-start gap-3">
-                                <div class="w-8 h-8 bg-amber bg-opacity-10 rounded-lg flex items-center justify-center flex-shrink-0">
-                                    <i data-lucide="check" class="w-5 h-5 text-amber"></i>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 md:gap-3 mb-6 md:mb-7 lg:mb-8 flex-1">
+                            <div class="flex items-start gap-2 md:gap-3 bg-white bg-opacity-5 p-2.5 md:p-3 rounded-lg backdrop-blur-sm">
+                                <div class="w-7 h-7 md:w-8 md:h-8 bg-amber bg-opacity-20 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <i data-lucide="package-check" class="w-4 h-4 md:w-5 md:h-5 text-amber"></i>
                                 </div>
                                 <div>
-                                    <p class="font-semibold text-navy text-sm">Profesyonel Paketleme</p>
-                                    <p class="text-xs text-gray-500">Özel malzemelerle koruma</p>
+                                    <p class="font-semibold text-white text-xs md:text-sm">Profesyonel Paketleme</p>
+                                    <p class="text-xs text-gray-400 hidden sm:block">Özel koruma malzemeleri</p>
                                 </div>
                             </div>
-                            <div class="flex items-start gap-3">
-                                <div class="w-8 h-8 bg-amber bg-opacity-10 rounded-lg flex items-center justify-center flex-shrink-0">
-                                    <i data-lucide="check" class="w-5 h-5 text-amber"></i>
+                            <div class="flex items-start gap-2 md:gap-3 bg-white bg-opacity-5 p-2.5 md:p-3 rounded-lg backdrop-blur-sm">
+                                <div class="w-7 h-7 md:w-8 md:h-8 bg-amber bg-opacity-20 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <i data-lucide="shield-check" class="w-4 h-4 md:w-5 md:h-5 text-amber"></i>
                                 </div>
                                 <div>
-                                    <p class="font-semibold text-navy text-sm">Sigortalı Taşıma</p>
-                                    <p class="text-xs text-gray-500">Tam güvence altında</p>
+                                    <p class="font-semibold text-white text-xs md:text-sm">Sigortalı Taşıma</p>
+                                    <p class="text-xs text-gray-400 hidden sm:block">Tam güvence altında</p>
                                 </div>
                             </div>
-                            <div class="flex items-start gap-3">
-                                <div class="w-8 h-8 bg-amber bg-opacity-10 rounded-lg flex items-center justify-center flex-shrink-0">
-                                    <i data-lucide="check" class="w-5 h-5 text-amber"></i>
+                            <div class="flex items-start gap-2 md:gap-3 bg-white bg-opacity-5 p-2.5 md:p-3 rounded-lg backdrop-blur-sm">
+                                <div class="w-7 h-7 md:w-8 md:h-8 bg-amber bg-opacity-20 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <i data-lucide="arrow-up-from-line" class="w-4 h-4 md:w-5 md:h-5 text-amber"></i>
                                 </div>
                                 <div>
-                                    <p class="font-semibold text-navy text-sm">Montaj-Demontaj</p>
-                                    <p class="text-xs text-gray-500">Mobilya kurulum hizmeti</p>
+                                    <p class="font-semibold text-white text-xs md:text-sm">Asansörlü Taşıma</p>
+                                    <p class="text-xs text-gray-400 hidden sm:block">Yüksek katlarda kolaylık</p>
                                 </div>
                             </div>
-                            <div class="flex items-start gap-3">
-                                <div class="w-8 h-8 bg-amber bg-opacity-10 rounded-lg flex items-center justify-center flex-shrink-0">
-                                    <i data-lucide="check" class="w-5 h-5 text-amber"></i>
+                            <div class="flex items-start gap-2 md:gap-3 bg-white bg-opacity-5 p-2.5 md:p-3 rounded-lg backdrop-blur-sm">
+                                <div class="w-7 h-7 md:w-8 md:h-8 bg-amber bg-opacity-20 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <i data-lucide="wrench" class="w-4 h-4 md:w-5 md:h-5 text-amber"></i>
                                 </div>
                                 <div>
-                                    <p class="font-semibold text-navy text-sm">Ücretsiz Keşif</p>
-                                    <p class="text-xs text-gray-500">Net fiyat garantisi</p>
+                                    <p class="font-semibold text-white text-xs md:text-sm">Montaj-Demontaj</p>
+                                    <p class="text-xs text-gray-400 hidden sm:block">Mobilya kurulum hizmeti</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-2 md:gap-3 bg-white bg-opacity-5 p-2.5 md:p-3 rounded-lg backdrop-blur-sm sm:col-span-2">
+                                <div class="w-7 h-7 md:w-8 md:h-8 bg-amber bg-opacity-20 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <i data-lucide="clipboard-check" class="w-4 h-4 md:w-5 md:h-5 text-amber"></i>
+                                </div>
+                                <div>
+                                    <p class="font-semibold text-white text-xs md:text-sm">Ücretsiz Keşif & Net Fiyat Garantisi</p>
+                                    <p class="text-xs text-gray-400 hidden sm:block">Koşulsuz, gizli maliyet yok</p>
                                 </div>
                             </div>
                         </div>
-                        <a href="https://wa.me/905514834234?text=Merhaba%2C%20%2AEvden%20Eve%20Nakliyat%2A%20hizmeti%20hakk%C4%B1nda%20fiyat%20teklifi%20almak%20istiyorum." 
+                        <a href="https://wa.me/905514834234?text=Merhaba%2C%20%2AAsans%C3%B6rl%C3%BC%20Evden%20Eve%20Nakliyat%2A%20hizmeti%20hakk%C4%B1nda%20fiyat%20teklifi%20almak%20istiyorum." 
                            target="_blank"
-                           class="inline-block text-center bg-amber text-navy px-8 py-3.5 rounded-xl font-bold hover:bg-opacity-90 transition shadow-lg">
+                           rel="noopener noreferrer"
+                           class="inline-block text-center shimmer-button bg-amber text-navy px-6 py-3 md:px-8 md:py-4 rounded-xl font-bold text-sm md:text-base hover:scale-105 transition-all shadow-2xl">
                             Hemen Fiyat Al →
                         </a>
                     </div>
                 </div>
                 
-                <!-- Service 2 - Ofis -->
-                <div class="scroll-reveal card-hover glass-card rounded-2xl p-8 border border-gray-200 shadow-lg">
-                    <div class="icon-halo w-16 h-16 bg-gradient-to-br from-navy to-blue-900 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
-                        <i data-lucide="briefcase" class="w-8 h-8 text-white"></i>
+                <!-- Service 2 - Şehirler Arası (sağ üst) -->
+                <div class="scroll-reveal card-hover glass-card sm:col-span-1 lg:col-span-2 rounded-xl md:rounded-2xl p-6 md:p-8 border border-slate-100 shadow-xl shadow-slate-200/50">
+                    <div class="icon-halo w-14 h-14 md:w-16 md:h-16 bg-gradient-to-br from-navy to-blue-900 rounded-xl md:rounded-2xl flex items-center justify-center mb-4 md:mb-6 shadow-lg">
+                        <i data-lucide="map-pin" class="w-7 h-7 md:w-8 md:h-8 text-white"></i>
                     </div>
-                    <h3 class="text-2xl font-bold tracking-tight text-navy mb-3">Ofis Taşıma</h3>
-                    <p class="text-gray-600 mb-4">
-                        İş yerinizi minimum aksama ile yeni adresinize taşıyoruz.
+                    <h3 class="text-xl md:text-2xl font-bold tracking-tight text-navy mb-2 md:mb-3">Şehirler Arası Nakliyat</h3>
+                    <p class="text-gray-600 text-sm md:text-base mb-3 md:mb-4">
+                        Türkiye'nin her yerine güvenli ve zamanında teslimat.
                     </p>
-                    <ul class="space-y-2 mb-6">
-                        <li class="flex items-center gap-2 text-sm text-gray-700">
-                            <i data-lucide="check" class="w-4 h-4 text-amber"></i>
-                            Hızlı Taşıma
+                    <ul class="space-y-1.5 md:space-y-2 mb-4 md:mb-6">
+                        <li class="flex items-center gap-2 text-xs md:text-sm text-gray-700">
+                            <i data-lucide="check" class="w-4 h-4 text-amber flex-shrink-0"></i>
+                            Tüm Türkiye
                         </li>
-                        <li class="flex items-center gap-2 text-sm text-gray-700">
-                            <i data-lucide="check" class="w-4 h-4 text-amber"></i>
-                            Kurulum Desteği
+                        <li class="flex items-center gap-2 text-xs md:text-sm text-gray-700">
+                            <i data-lucide="check" class="w-4 h-4 text-amber flex-shrink-0"></i>
+                            Takip Sistemi
                         </li>
-                        <li class="flex items-center gap-2 text-sm text-gray-700">
-                            <i data-lucide="check" class="w-4 h-4 text-amber"></i>
-                            Güvenli Taşıma
+                        <li class="flex items-center gap-2 text-xs md:text-sm text-gray-700">
+                            <i data-lucide="check" class="w-4 h-4 text-amber flex-shrink-0"></i>
+                            Zamanında Teslimat
                         </li>
                     </ul>
-                    <a href="https://wa.me/905514834234?text=Merhaba%2C%20%2AOfis%20Ta%C5%9F%C4%B1ma%2A%20hizmeti%20hakk%C4%B1nda%20fiyat%20teklifi%20almak%20istiyorum." 
+                    <a href="https://wa.me/905514834234?text=Merhaba%2C%20%2A%C5%9Eehirler%20Aras%C4%B1%20Nakliyat%2A%20hizmeti%20hakk%C4%B1nda%20fiyat%20teklifi%20almak%20istiyorum." 
                        target="_blank"
-                       class="block text-center bg-navy text-white py-3 rounded-xl font-semibold hover:bg-opacity-90 transition">
+                       rel="noopener noreferrer"
+                       class="block text-center bg-navy text-white py-2.5 md:py-3 rounded-xl text-sm md:text-base font-semibold hover:bg-opacity-90 transition">
                         Fiyat Al
                     </a>
                 </div>
                 
-                <!-- Service 3 - Parça Eşya -->
-                <div class="scroll-reveal card-hover glass-card rounded-2xl p-8 border border-gray-200 shadow-lg">
-                    <div class="icon-halo w-16 h-16 bg-gradient-to-br from-amber to-orange-600 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
-                        <i data-lucide="package" class="w-8 h-8 text-white"></i>
+                <!-- Service 3 - Parça Eşya (sağ orta) -->
+                <div class="scroll-reveal card-hover glass-card sm:col-span-1 lg:col-span-2 rounded-xl md:rounded-2xl p-6 md:p-8 border border-slate-100 shadow-xl shadow-slate-200/50">
+                    <div class="icon-halo w-14 h-14 md:w-16 md:h-16 bg-gradient-to-br from-amber to-orange-600 rounded-xl md:rounded-2xl flex items-center justify-center mb-4 md:mb-6 shadow-lg">
+                        <i data-lucide="package" class="w-7 h-7 md:w-8 md:h-8 text-white"></i>
                     </div>
-                    <h3 class="text-2xl font-bold tracking-tight text-navy mb-3">Parça Eşya</h3>
-                    <p class="text-gray-600 mb-4">
-                        Tek bir eşya veya birkaç parçayı ekonomik fiyatlarla taşıyoruz.
+                    <h3 class="text-xl md:text-2xl font-bold tracking-tight text-navy mb-2 md:mb-3">Parça Eşya & Malzeme</h3>
+                    <p class="text-gray-600 text-sm md:text-base mb-3 md:mb-4">
+                        Her türlü parça eşya ve malzeme taşımacılığı hizmetleri.
                     </p>
-                    <ul class="space-y-2 mb-6">
-                        <li class="flex items-center gap-2 text-sm text-gray-700">
-                            <i data-lucide="check" class="w-4 h-4 text-amber"></i>
+                    <ul class="space-y-1.5 md:space-y-2 mb-4 md:mb-6">
+                        <li class="flex items-center gap-2 text-xs md:text-sm text-gray-700">
+                            <i data-lucide="check" class="w-4 h-4 text-amber flex-shrink-0"></i>
+                            Tek Eşya Taşıma
+                        </li>
+                        <li class="flex items-center gap-2 text-xs md:text-sm text-gray-700">
+                            <i data-lucide="check" class="w-4 h-4 text-amber flex-shrink-0"></i>
+                            Malzeme Nakliyesi
+                        </li>
+                        <li class="flex items-center gap-2 text-xs md:text-sm text-gray-700">
+                            <i data-lucide="check" class="w-4 h-4 text-amber flex-shrink-0"></i>
                             Ekonomik Fiyat
                         </li>
-                        <li class="flex items-center gap-2 text-sm text-gray-700">
-                            <i data-lucide="check" class="w-4 h-4 text-amber"></i>
-                            Özel Paketleme
+                    </ul>
+                    <a href="https://wa.me/905514834234?text=Merhaba%2C%20%2APar%C3%A7a%20E%C5%9Fya%20%26%20Malzeme%20Ta%C5%9F%C4%B1ma%2A%20hizmeti%20hakk%C4%B1nda%20fiyat%20teklifi%20almak%20istiyorum." 
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="block text-center bg-amber text-navy py-2.5 md:py-3 rounded-xl text-sm md:text-base font-semibold hover:bg-opacity-90 transition">
+                        Fiyat Al
+                    </a>
+                </div>
+                
+                <!-- Service 4 - Ofis & Komple Araç (sol alt) -->
+                <div class="scroll-reveal card-hover glass-card sm:col-span-1 lg:col-span-2 rounded-xl md:rounded-2xl p-6 md:p-8 border border-slate-100 shadow-xl shadow-slate-200/50">
+                    <div class="icon-halo w-14 h-14 md:w-16 md:h-16 bg-gradient-to-br from-navy to-blue-900 rounded-xl md:rounded-2xl flex items-center justify-center mb-4 md:mb-6 shadow-lg">
+                        <i data-lucide="briefcase" class="w-7 h-7 md:w-8 md:h-8 text-white"></i>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-bold tracking-tight text-navy mb-2 md:mb-3">Ofis & Komple Araç Taşıma</h3>
+                    <p class="text-gray-600 text-sm md:text-base mb-3 md:mb-4">
+                        İş yeri ve tam araç yükü taşımacılığı hizmetleri.
+                    </p>
+                    <ul class="space-y-1.5 md:space-y-2 mb-4 md:mb-6">
+                        <li class="flex items-center gap-2 text-xs md:text-sm text-gray-700">
+                            <i data-lucide="check" class="w-4 h-4 text-amber flex-shrink-0"></i>
+                            Ofis Taşıma
                         </li>
-                        <li class="flex items-center gap-2 text-sm text-gray-700">
-                            <i data-lucide="check" class="w-4 h-4 text-amber"></i>
+                        <li class="flex items-center gap-2 text-xs md:text-sm text-gray-700">
+                            <i data-lucide="check" class="w-4 h-4 text-amber flex-shrink-0"></i>
+                            Komple Araç Yükü
+                        </li>
+                        <li class="flex items-center gap-2 text-xs md:text-sm text-gray-700">
+                            <i data-lucide="check" class="w-4 h-4 text-amber flex-shrink-0"></i>
                             Hızlı Teslimat
                         </li>
                     </ul>
-                    <a href="https://wa.me/905514834234?text=Merhaba%2C%20%2APar%C3%A7a%20E%C5%9Fya%20Ta%C5%9F%C4%B1ma%2A%20hizmeti%20hakk%C4%B1nda%20fiyat%20teklifi%20almak%20istiyorum." 
+                    <a href="https://wa.me/905514834234?text=Merhaba%2C%20%2AOfis%20%26%20Komple%20Ara%C3%A7%20Ta%C5%9F%C4%B1ma%2A%20hizmeti%20hakk%C4%B1nda%20fiyat%20teklifi%20almak%20istiyorum." 
                        target="_blank"
-                       class="block text-center bg-amber text-navy py-3 rounded-xl font-semibold hover:bg-opacity-90 transition">
+                       rel="noopener noreferrer"
+                       class="block text-center bg-navy text-white py-2.5 md:py-3 rounded-xl text-sm md:text-base font-semibold hover:bg-opacity-90 transition">
                         Fiyat Al
                     </a>
                 </div>
                 
-                <!-- Service 4 - Şehirler Arası (2 columns wide) -->
-                <div class="scroll-reveal card-hover glass-card lg:col-span-2 rounded-2xl p-8 border border-gray-200 shadow-lg flex flex-col md:flex-row gap-6 items-center">
-                    <div class="flex-shrink-0">
-                        <div class="icon-halo w-20 h-20 bg-gradient-to-br from-navy to-blue-900 rounded-2xl flex items-center justify-center shadow-lg">
-                            <i data-lucide="map-pin" class="w-10 h-10 text-white"></i>
-                        </div>
+                <!-- Service 5 - Soğuk Zincir (sağ alt) -->
+                <div class="scroll-reveal card-hover glass-card sm:col-span-1 lg:col-span-2 rounded-xl md:rounded-2xl p-6 md:p-8 border border-blue-100 shadow-xl shadow-blue-200/50 bg-gradient-to-br from-blue-50 to-cyan-50 relative overflow-hidden">
+                    <!-- Ice Crystal Decoration -->
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-400 to-cyan-400 rounded-full blur-3xl opacity-20"></div>
+                    <div class="icon-halo w-14 h-14 md:w-16 md:h-16 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-xl md:rounded-2xl flex items-center justify-center mb-4 md:mb-6 shadow-lg relative">
+                        <i data-lucide="snowflake" class="w-7 h-7 md:w-8 md:h-8 text-white"></i>
                     </div>
-                    <div class="flex-1">
-                        <h3 class="text-2xl font-bold tracking-tight text-navy mb-3">Şehirler Arası Nakliyat</h3>
-                        <p class="text-gray-600 mb-4">
-                            Türkiye'nin her yerine güvenli ve zamanında teslimat. Modern takip sistemi ile eşyalarınızın nerede olduğunu her an bilin.
+                    <div class="relative">
+                        <div class="flex items-center gap-2 mb-2 md:mb-3">
+                            <h3 class="text-xl md:text-2xl font-bold tracking-tight text-navy">Soğuk Zincir Taşıma</h3>
+                            <span class="bg-blue-600 text-white text-xs px-2 py-0.5 md:py-1 rounded-full font-semibold">PREMİUM</span>
+                        </div>
+                        <p class="text-gray-700 text-sm md:text-base mb-3 md:mb-4">
+                            Frigolu araçlarla gıda, ilaç ve hassas ürün taşımacılığı.
                         </p>
-                        <div class="flex flex-wrap gap-4">
-                            <div class="flex items-center gap-2 text-sm text-gray-700">
-                                <i data-lucide="check" class="w-4 h-4 text-amber"></i>
-                                Tüm Türkiye
-                            </div>
-                            <div class="flex items-center gap-2 text-sm text-gray-700">
-                                <i data-lucide="check" class="w-4 h-4 text-amber"></i>
-                                Takip Sistemi
-                            </div>
-                            <div class="flex items-center gap-2 text-sm text-gray-700">
-                                <i data-lucide="check" class="w-4 h-4 text-amber"></i>
-                                Zamanında Teslimat
+                        <ul class="space-y-1.5 md:space-y-2 mb-4 md:mb-6">
+                            <li class="flex items-center gap-2 text-xs md:text-sm text-gray-700">
+                                <i data-lucide="check" class="w-4 h-4 text-blue-600 flex-shrink-0"></i>
+                                Sıcaklık Kontrollü
+                            </li>
+                            <li class="flex items-center gap-2 text-xs md:text-sm text-gray-700">
+                                <i data-lucide="check" class="w-4 h-4 text-blue-600 flex-shrink-0"></i>
+                                Sertifikalı Hizmet
+                            </li>
+                            <li class="flex items-center gap-2 text-xs md:text-sm text-gray-700">
+                                <i data-lucide="check" class="w-4 h-4 text-blue-600 flex-shrink-0"></i>
+                                Hassas Ürün Güvencesi
+                            </li>
+                        </ul>
+                        <a href="https://wa.me/905514834234?text=Merhaba%2C%20%2ASo%C4%9Fuk%20Zincir%20Ta%C5%9F%C4%B1ma%2A%20hizmeti%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." 
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="block text-center bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-2.5 md:py-3 rounded-xl text-sm md:text-base font-semibold hover:opacity-90 transition shadow-lg">
+                            Bilgi Al
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 6 - Depolama (tam genişlik) -->
+                <div class="scroll-reveal card-hover glass-card sm:col-span-2 lg:col-span-4 rounded-xl md:rounded-2xl p-6 md:p-8 border border-slate-100 shadow-xl shadow-slate-200/50 bg-gradient-to-br from-slate-50 to-gray-100">
+                    <div class="flex flex-col md:flex-row gap-4 md:gap-6 items-center">
+                        <div class="flex-shrink-0">
+                            <div class="icon-halo w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-slate-700 to-gray-800 rounded-xl md:rounded-2xl flex items-center justify-center shadow-lg">
+                                <i data-lucide="warehouse" class="w-8 h-8 md:w-10 md:h-10 text-white"></i>
                             </div>
                         </div>
-                    </div>
-                    <div class="flex-shrink-0">
-                        <a href="https://wa.me/905514834234?text=Merhaba%2C%20%2A%C5%9Eehirler%20Aras%C4%B1%20Nakliyat%2A%20hizmeti%20hakk%C4%B1nda%20fiyat%20teklifi%20almak%20istiyorum." 
-                           target="_blank"
-                           class="inline-block text-center bg-navy text-white px-8 py-3 rounded-xl font-semibold hover:bg-opacity-90 transition whitespace-nowrap">
-                            Fiyat Al
-                        </a>
+                        <div class="flex-1">
+                            <h3 class="text-xl md:text-2xl font-bold tracking-tight text-navy mb-2 md:mb-3">Depolama Hizmeti</h3>
+                            <p class="text-gray-700 text-sm md:text-base mb-3 md:mb-4">
+                                Güvenli ve sigortalı depolama alanlarımızda eşyalarınızı saklayın. Kısa veya uzun dönem seçenekleri.
+                            </p>
+                            <div class="flex flex-wrap gap-3 md:gap-4">
+                                <div class="flex items-center gap-2 text-xs md:text-sm text-gray-700">
+                                    <i data-lucide="check" class="w-4 h-4 text-amber flex-shrink-0"></i>
+                                    Güvenli Depo
+                                </div>
+                                <div class="flex items-center gap-2 text-xs md:text-sm text-gray-700">
+                                    <i data-lucide="check" class="w-4 h-4 text-amber flex-shrink-0"></i>
+                                    Sigorta Güvencesi
+                                </div>
+                                <div class="flex items-center gap-2 text-xs md:text-sm text-gray-700">
+                                    <i data-lucide="check" class="w-4 h-4 text-amber flex-shrink-0"></i>
+                                    Esnek Süreler
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex-shrink-0 w-full md:w-auto">
+                            <a href="https://wa.me/905514834234?text=Merhaba%2C%20%2ADepolama%20Hizmeti%2A%20hakk%C4%B1nda%20fiyat%20teklifi%20almak%20istiyorum." 
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="block md:inline-block text-center bg-slate-700 text-white px-6 py-2.5 md:px-8 md:py-3 rounded-xl text-sm md:text-base font-semibold hover:bg-opacity-90 transition whitespace-nowrap">
+                                Fiyat Al
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Fleet Section (Araç Filosu) -->
+    <section class="py-10 md:py-14 lg:py-18 xl:py-20 bg-gradient-to-br from-navy via-slate-800 to-navy relative overflow-hidden">
+        <!-- Decorative Elements -->
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-0 left-1/4 w-96 h-96 bg-amber rounded-full blur-3xl"></div>
+            <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500 rounded-full blur-3xl"></div>
+        </div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="text-center mb-10 md:mb-14 lg:mb-16 scroll-reveal">
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white mb-3 md:mb-4">Modern Araç Filomuz</h2>
+                <p class="text-base sm:text-lg lg:text-xl text-gray-300 max-w-2xl mx-auto">
+                    Her ihtiyaca özel geniş araç seçeneklerimiz
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 max-w-6xl mx-auto">
+                <!-- Panelvan -->
+                <div class="scroll-reveal glass-card rounded-xl md:rounded-2xl p-6 md:p-8 border border-white border-opacity-10 shadow-2xl backdrop-blur-lg bg-white bg-opacity-5 hover:bg-opacity-10 transition-all group">
+                    <div class="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-amber to-orange-600 rounded-xl md:rounded-2xl flex items-center justify-center mb-5 md:mb-6 shadow-lg mx-auto group-hover:scale-110 transition-transform">
+                        <i data-lucide="truck" class="w-8 h-8 md:w-10 md:h-10 text-white"></i>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-bold tracking-tight text-white text-center mb-2 md:mb-3">Panelvan Araçlar</h3>
+                    <p class="text-sm md:text-base text-gray-300 text-center mb-5 md:mb-6">
+                        Küçük çaplı taşımalar için ideal
+                    </p>
+                    <div class="space-y-2.5 md:space-y-3 mb-5 md:mb-6">
+                        <div class="flex items-center justify-between text-xs md:text-sm">
+                            <span class="text-gray-300">Kapasite:</span>
+                            <span class="text-white font-semibold">6-8 m³</span>
+                        </div>
+                        <div class="flex items-center justify-between text-xs md:text-sm">
+                            <span class="text-gray-300">Uygun:</span>
+                            <span class="text-white font-semibold">Parça Eşya</span>
+                        </div>
+                        <div class="flex items-center justify-between text-xs md:text-sm">
+                            <span class="text-gray-300">Özellik:</span>
+                            <span class="text-white font-semibold">Hızlı Teslimat</span>
+                        </div>
+                    </div>
+                    <ul class="space-y-2">
+                        <li class="flex items-center gap-2 text-xs md:text-sm text-gray-300">
+                            <i data-lucide="check" class="w-4 h-4 text-amber flex-shrink-0"></i>
+                            Şehir içi ideal
+                        </li>
+                        <li class="flex items-center gap-2 text-xs md:text-sm text-gray-300">
+                            <i data-lucide="check" class="w-4 h-4 text-amber flex-shrink-0"></i>
+                            Ekonomik seçenek
+                        </li>
+                        <li class="flex items-center gap-2 text-xs md:text-sm text-gray-300">
+                            <i data-lucide="check" class="w-4 h-4 text-amber flex-shrink-0"></i>
+                            Park kolaylığı
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Kamyonet -->
+                <div class="scroll-reveal glass-card rounded-xl md:rounded-2xl p-6 md:p-8 border border-white border-opacity-10 shadow-2xl backdrop-blur-lg bg-white bg-opacity-5 hover:bg-opacity-10 transition-all group">
+                    <div class="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-xl md:rounded-2xl flex items-center justify-center mb-5 md:mb-6 shadow-lg mx-auto group-hover:scale-110 transition-transform">
+                        <i data-lucide="truck" class="w-8 h-8 md:w-10 md:h-10 text-white"></i>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-bold tracking-tight text-white text-center mb-2 md:mb-3">Kamyonet Araçlar</h3>
+                    <p class="text-sm md:text-base text-gray-300 text-center mb-5 md:mb-6">
+                        Orta ölçekli taşımalar için
+                    </p>
+                    <div class="space-y-2.5 md:space-y-3 mb-5 md:mb-6">
+                        <div class="flex items-center justify-between text-sm">
+                            <span class="text-gray-300">Kapasite:</span>
+                            <span class="text-white font-semibold">10-15 m³</span>
+                        </div>
+                        <div class="flex items-center justify-between text-sm">
+                            <span class="text-gray-300">Uygun:</span>
+                            <span class="text-white font-semibold">1+1 / 2+1 Ev</span>
+                        </div>
+                        <div class="flex items-center justify-between text-sm">
+                            <span class="text-gray-300">Özellik:</span>
+                            <span class="text-white font-semibold">Çok Amaçlı</span>
+                        </div>
+                    </div>
+                    <ul class="space-y-2">
+                        <li class="flex items-center gap-2 text-xs md:text-sm text-gray-300">
+                            <i data-lucide="check" class="w-4 h-4 text-blue-400 flex-shrink-0"></i>
+                            Ofis taşıma
+                        </li>
+                        <li class="flex items-center gap-2 text-xs md:text-sm text-gray-300">
+                            <i data-lucide="check" class="w-4 h-4 text-blue-400 flex-shrink-0"></i>
+                            Şehirler arası
+                        </li>
+                        <li class="flex items-center gap-2 text-xs md:text-sm text-gray-300">
+                            <i data-lucide="check" class="w-4 h-4 text-blue-400 flex-shrink-0"></i>
+                            Malzeme taşıma
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Kamyon -->
+                <div class="scroll-reveal glass-card rounded-xl md:rounded-2xl p-6 md:p-8 border border-white border-opacity-10 shadow-2xl backdrop-blur-lg bg-white bg-opacity-5 hover:bg-opacity-10 transition-all group">
+                    <div class="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-xl md:rounded-2xl flex items-center justify-center mb-5 md:mb-6 shadow-lg mx-auto group-hover:scale-110 transition-transform">
+                        <i data-lucide="truck" class="w-8 h-8 md:w-10 md:h-10 text-white"></i>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-bold tracking-tight text-white text-center mb-2 md:mb-3">Kamyon Araçlar</h3>
+                    <p class="text-sm md:text-base text-gray-300 text-center mb-5 md:mb-6">
+                        Büyük taşımalar için güçlü
+                    </p>
+                    <div class="space-y-2.5 md:space-y-3 mb-5 md:mb-6">
+                        <div class="flex items-center justify-between text-sm">
+                            <span class="text-gray-300">Kapasite:</span>
+                            <span class="text-white font-semibold">30-45 m³</span>
+                        </div>
+                        <div class="flex items-center justify-between text-sm">
+                            <span class="text-gray-300">Uygun:</span>
+                            <span class="text-white font-semibold">3+1 / 4+1 Ev</span>
+                        </div>
+                        <div class="flex items-center justify-between text-sm">
+                            <span class="text-gray-300">Özellik:</span>
+                            <span class="text-white font-semibold">Yüksek Kapasite</span>
+                        </div>
+                    </div>
+                    <ul class="space-y-2">
+                        <li class="flex items-center gap-2 text-xs md:text-sm text-gray-300">
+                            <i data-lucide="check" class="w-4 h-4 text-emerald-400 flex-shrink-0"></i>
+                            Komple ev taşıma
+                        </li>
+                        <li class="flex items-center gap-2 text-xs md:text-sm text-gray-300">
+                            <i data-lucide="check" class="w-4 h-4 text-emerald-400 flex-shrink-0"></i>
+                            Asansörlü sistem
+                        </li>
+                        <li class="flex items-center gap-2 text-xs md:text-sm text-gray-300">
+                            <i data-lucide="check" class="w-4 h-4 text-emerald-400 flex-shrink-0"></i>
+                            Uzun mesafe
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- CTA -->
+            <div class="text-center mt-8 md:mt-10 lg:mt-12 scroll-reveal">
+                <p class="text-gray-300 mb-6 text-lg">
+                    <span class="text-amber font-bold">15+ modern araç</span> ile her türlü nakliyat ihtiyacınıza çözüm
+                </p>
+                <a href="https://wa.me/905514834234?text=Merhaba%2C%20ara%C3%A7%20filonuz%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." 
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="inline-block shimmer-button bg-amber text-navy px-10 py-4 rounded-xl font-bold hover:scale-105 transition-all shadow-2xl">
+                    Araç Bilgisi Al →
+                </a>
+            </div>
+        </div>
+    </section>
+
     <!-- Why Us Section -->
-    <section id="neden-biz" class="py-20 bg-gradient-to-br from-gray-50 to-white">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16 scroll-reveal">
-                <h2 class="text-4xl md:text-5xl font-bold tracking-tight text-navy mb-4">Neden Keske Nakliyat?</h2>
-                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+    <section id="neden-biz" class="py-12 md:py-16 lg:py-20 xl:py-24 bg-gradient-to-br from-slate-50 via-white to-blue-50 relative overflow-hidden">
+        <!-- Decorative mesh gradient -->
+        <div class="absolute inset-0 opacity-30">
+            <div class="absolute top-20 left-10 w-72 h-72 bg-amber rounded-full blur-3xl animate-pulse-subtle"></div>
+            <div class="absolute bottom-20 right-10 w-96 h-96 bg-blue-400 rounded-full blur-3xl animate-pulse-subtle" style="animation-delay: 2s;"></div>
+        </div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="text-center mb-10 md:mb-16 scroll-reveal">
+                <h2 class="text-3xl md:text-5xl font-bold tracking-tight text-navy mb-3 md:mb-4">Neden Keske Nakliyat?</h2>
+                <p class="text-base md:text-xl text-gray-600 max-w-2xl mx-auto">
                     Binlerce müşterimizin tercihi, güvenilir nakliyat çözümleri
                 </p>
             </div>
             
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-10 md:mb-12 max-w-7xl mx-auto">
                 <!-- Feature 1 -->
-                <div class="scroll-reveal bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
-                    <div class="icon-halo w-14 h-14 bg-amber bg-opacity-10 rounded-xl flex items-center justify-center mb-4">
-                        <i data-lucide="shield-check" class="w-7 h-7 text-amber"></i>
+                <div class="scroll-reveal glass-card rounded-xl md:rounded-2xl p-6 md:p-8 shadow-lg border border-gray-200 bg-white bg-opacity-60 backdrop-blur-sm hover:bg-opacity-80 hover:shadow-2xl hover:scale-105 transition-all duration-300 group">
+                    <div class="icon-halo w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br from-amber to-orange-600 rounded-xl flex items-center justify-center mb-4 md:mb-5 shadow-lg group-hover:scale-110 transition-transform">
+                        <i data-lucide="shield-check" class="w-6 h-6 md:w-8 md:h-8 text-white"></i>
                     </div>
-                    <h3 class="text-xl font-bold tracking-tight text-navy mb-3">Sigortalı Taşımacılık</h3>
-                    <p class="text-gray-600">
+                    <h3 class="text-lg md:text-xl font-bold tracking-tight text-navy mb-2 md:mb-3">Sigortalı Taşımacılık</h3>
+                    <p class="text-sm md:text-base text-gray-600 leading-relaxed">
                         Tüm eşyalarınız sigorta güvencesi altında taşınır. Olası hasar durumlarında tam teminat.
                     </p>
                 </div>
                 
                 <!-- Feature 2 -->
-                <div class="scroll-reveal bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
-                    <div class="icon-halo w-14 h-14 bg-amber bg-opacity-10 rounded-xl flex items-center justify-center mb-4">
-                        <i data-lucide="headphones" class="w-7 h-7 text-amber"></i>
+                <div class="scroll-reveal glass-card rounded-xl md:rounded-2xl p-6 md:p-8 shadow-lg border border-gray-200 bg-white bg-opacity-60 backdrop-blur-sm hover:bg-opacity-80 hover:shadow-2xl hover:scale-105 transition-all duration-300 group">
+                    <div class="icon-halo w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-xl flex items-center justify-center mb-4 md:mb-5 shadow-lg group-hover:scale-110 transition-transform">
+                        <i data-lucide="headphones" class="w-6 h-6 md:w-8 md:h-8 text-white"></i>
                     </div>
-                    <h3 class="text-xl font-bold tracking-tight text-navy mb-3">7/24 Canlı Destek</h3>
-                    <p class="text-gray-600">
+                    <h3 class="text-lg md:text-xl font-bold tracking-tight text-navy mb-2 md:mb-3">7/24 Canlı Destek</h3>
+                    <p class="text-sm md:text-base text-gray-600 leading-relaxed">
                         Günün her saati ulaşabileceğiniz müşteri hizmetleri ekibimiz her zaman yanınızda.
                     </p>
                 </div>
                 
                 <!-- Feature 3 -->
-                <div class="scroll-reveal bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
-                    <div class="icon-halo w-14 h-14 bg-amber bg-opacity-10 rounded-xl flex items-center justify-center mb-4">
-                        <i data-lucide="users" class="w-7 h-7 text-amber"></i>
+                <div class="scroll-reveal glass-card rounded-xl md:rounded-2xl p-6 md:p-8 shadow-lg border border-gray-200 bg-white bg-opacity-60 backdrop-blur-sm hover:bg-opacity-80 hover:shadow-2xl hover:scale-105 transition-all duration-300 group">
+                    <div class="icon-halo w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-xl flex items-center justify-center mb-4 md:mb-5 shadow-lg group-hover:scale-110 transition-transform">
+                        <i data-lucide="users" class="w-6 h-6 md:w-8 md:h-8 text-white"></i>
                     </div>
-                    <h3 class="text-xl font-bold tracking-tight text-navy mb-3">Profesyonel Ekip</h3>
-                    <p class="text-gray-600">
+                    <h3 class="text-lg md:text-xl font-bold tracking-tight text-navy mb-2 md:mb-3">Profesyonel Ekip</h3>
+                    <p class="text-sm md:text-base text-gray-600 leading-relaxed">
                         Alanında uzman, deneyimli ve güler yüzlü ekip arkadaşlarımız hizmetinizde.
                     </p>
                 </div>
                 
                 <!-- Feature 4 -->
-                <div class="scroll-reveal bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
-                    <div class="icon-halo w-14 h-14 bg-amber bg-opacity-10 rounded-xl flex items-center justify-center mb-4">
-                        <i data-lucide="package-check" class="w-7 h-7 text-amber"></i>
+                <div class="scroll-reveal glass-card rounded-xl md:rounded-2xl p-6 md:p-8 shadow-lg border border-gray-200 bg-white bg-opacity-60 backdrop-blur-sm hover:bg-opacity-80 hover:shadow-2xl hover:scale-105 transition-all duration-300 group">
+                    <div class="icon-halo w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-4 md:mb-5 shadow-lg group-hover:scale-110 transition-transform">
+                        <i data-lucide="package-check" class="w-6 h-6 md:w-8 md:h-8 text-white"></i>
                     </div>
-                    <h3 class="text-xl font-bold tracking-tight text-navy mb-3">Özel Paketleme</h3>
-                    <p class="text-gray-600">
+                    <h3 class="text-lg md:text-xl font-bold tracking-tight text-navy mb-2 md:mb-3">Özel Paketleme</h3>
+                    <p class="text-sm md:text-base text-gray-600 leading-relaxed">
                         Kırılabilir ve değerli eşyalarınız için özel paketleme malzemeleri kullanıyoruz.
                     </p>
                 </div>
                 
                 <!-- Feature 5 -->
-                <div class="scroll-reveal bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
-                    <div class="icon-halo w-14 h-14 bg-amber bg-opacity-10 rounded-xl flex items-center justify-center mb-4">
-                        <i data-lucide="truck" class="w-7 h-7 text-amber"></i>
+                <div class="scroll-reveal glass-card rounded-xl md:rounded-2xl p-6 md:p-8 shadow-lg border border-gray-200 bg-gradient-to-br from-amber-50 to-orange-50 bg-opacity-80 backdrop-blur-sm hover:shadow-2xl hover:scale-105 transition-all duration-300 group">
+                    <div class="icon-halo w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br from-amber to-orange-600 rounded-xl flex items-center justify-center mb-4 md:mb-5 shadow-lg group-hover:scale-110 transition-transform">
+                        <i data-lucide="arrow-up-from-line" class="w-6 h-6 md:w-8 md:h-8 text-white"></i>
                     </div>
-                    <h3 class="text-xl font-bold tracking-tight text-navy mb-3">Modern Araç Filomuz</h3>
-                    <p class="text-gray-600">
-                        Yeni model, bakımlı ve her türlü nakliyat için uygun araçlarımız mevcut.
+                    <h3 class="text-lg md:text-xl font-bold tracking-tight text-navy mb-2 md:mb-3">Asansörlü Taşıma Sistemi</h3>
+                    <p class="text-sm md:text-base text-gray-700 leading-relaxed">
+                        Yüksek katlardaki evler için profesyonel asansörlü taşıma ekipmanlarımız ile kolay ve güvenli taşıma.
                     </p>
                 </div>
                 
                 <!-- Feature 6 -->
-                <div class="scroll-reveal bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
-                    <div class="icon-halo w-14 h-14 bg-amber bg-opacity-10 rounded-xl flex items-center justify-center mb-4">
-                        <i data-lucide="dollar-sign" class="w-7 h-7 text-amber"></i>
+                <div class="scroll-reveal glass-card rounded-xl md:rounded-2xl p-6 md:p-8 shadow-lg border border-blue-200 bg-gradient-to-br from-blue-50 to-cyan-50 bg-opacity-80 backdrop-blur-sm hover:shadow-2xl hover:scale-105 transition-all duration-300 group">
+                    <div class="icon-halo w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-xl flex items-center justify-center mb-4 md:mb-5 shadow-lg group-hover:scale-110 transition-transform">
+                        <i data-lucide="snowflake" class="w-6 h-6 md:w-8 md:h-8 text-white"></i>
                     </div>
-                    <h3 class="text-xl font-bold tracking-tight text-navy mb-3">Uygun Fiyat</h3>
-                    <p class="text-gray-600">
-                        Kaliteden ödün vermeden rekabetçi fiyatlarla hizmet sunuyoruz.
+                    <h3 class="text-lg md:text-xl font-bold tracking-tight text-navy mb-2 md:mb-3">Soğuk Zincir Taşıma</h3>
+                    <p class="text-sm md:text-base text-gray-700 leading-relaxed">
+                        Gıda, ilaç ve hassas ürünleriniz için sıcaklık kontrollü frigolu araçlarımız ile özel taşıma hizmeti.
+                    </p>
+                </div>
+                
+                <!-- Feature 7 -->
+                <div class="scroll-reveal glass-card rounded-xl md:rounded-2xl p-6 md:p-8 shadow-lg border border-gray-200 bg-white bg-opacity-60 backdrop-blur-sm hover:bg-opacity-80 hover:shadow-2xl hover:scale-105 transition-all duration-300 group">
+                    <div class="icon-halo w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br from-slate-700 to-gray-800 rounded-xl flex items-center justify-center mb-4 md:mb-5 shadow-lg group-hover:scale-110 transition-transform">
+                        <i data-lucide="warehouse" class="w-6 h-6 md:w-8 md:h-8 text-white"></i>
+                    </div>
+                    <h3 class="text-lg md:text-xl font-bold tracking-tight text-navy mb-2 md:mb-3">Güvenli Depolama</h3>
+                    <p class="text-sm md:text-base text-gray-600 leading-relaxed">
+                        Sigortalı ve güvenli depolama alanlarımızda eşyalarınızı kısa veya uzun süre saklama imkanı.
+                    </p>
+                </div>
+                
+                <!-- Feature 8 -->
+                <div class="scroll-reveal glass-card rounded-xl md:rounded-2xl p-6 md:p-8 shadow-lg border border-gray-200 bg-white bg-opacity-60 backdrop-blur-sm hover:bg-opacity-80 hover:shadow-2xl hover:scale-105 transition-all duration-300 group">
+                    <div class="icon-halo w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl flex items-center justify-center mb-4 md:mb-5 shadow-lg group-hover:scale-110 transition-transform">
+                        <i data-lucide="dollar-sign" class="w-6 h-6 md:w-8 md:h-8 text-white"></i>
+                    </div>
+                    <h3 class="text-lg md:text-xl font-bold tracking-tight text-navy mb-2 md:mb-3">Uygun Fiyat Garantisi</h3>
+                    <p class="text-sm md:text-base text-gray-600 leading-relaxed">
+                        Kaliteden ödün vermeden rekabetçi fiyatlarla hizmet sunuyoruz. Gizli maliyet yok.
                     </p>
                 </div>
             </div>
             
             <!-- Stats -->
-            <div class="scroll-reveal grid md:grid-cols-4 gap-8 bg-navy rounded-3xl p-8 md:p-12 text-white shadow-2xl">
-                <div class="text-center">
-                    <div class="text-4xl md:text-5xl font-bold text-amber mb-2">15+</div>
-                    <div class="text-gray-300">Yıllık Tecrübe</div>
+            <div class="scroll-reveal grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 bg-gradient-to-br from-navy via-slate-800 to-navy rounded-2xl md:rounded-3xl p-6 md:p-12 text-white shadow-2xl max-w-5xl mx-auto border border-gray-700 relative overflow-hidden">
+                <!-- Decorative gradient overlay -->
+                <div class="absolute inset-0 bg-gradient-to-br from-amber/10 via-transparent to-blue-500/10"></div>
+                
+                <div class="text-center relative z-10">
+                    <div class="flex items-center justify-center mb-2 md:mb-3">
+                        <div class="w-10 h-10 md:w-12 md:h-12 bg-amber/20 rounded-xl flex items-center justify-center mb-2">
+                            <i data-lucide="award" class="w-5 h-5 md:w-6 md:h-6 text-amber"></i>
+                        </div>
+                    </div>
+                    <div class="text-3xl md:text-5xl font-bold text-amber mb-1 md:mb-2">15+</div>
+                    <div class="text-xs md:text-base text-gray-300">Yıllık Tecrübe</div>
                 </div>
-                <div class="text-center">
-                    <div class="text-4xl md:text-5xl font-bold text-amber mb-2">10K+</div>
-                    <div class="text-gray-300">Mutlu Müşteri</div>
+                <div class="text-center relative z-10">
+                    <div class="flex items-center justify-center mb-2 md:mb-3">
+                        <div class="w-10 h-10 md:w-12 md:h-12 bg-amber/20 rounded-xl flex items-center justify-center mb-2">
+                            <i data-lucide="users" class="w-5 h-5 md:w-6 md:h-6 text-amber"></i>
+                        </div>
+                    </div>
+                    <div class="text-3xl md:text-5xl font-bold text-amber mb-1 md:mb-2">10K+</div>
+                    <div class="text-xs md:text-base text-gray-300">Mutlu Müşteri</div>
                 </div>
-                <div class="text-center">
-                    <div class="text-4xl md:text-5xl font-bold text-amber mb-2">50+</div>
-                    <div class="text-gray-300">Profesyonel Ekip</div>
+                <div class="text-center relative z-10">
+                    <div class="flex items-center justify-center mb-2 md:mb-3">
+                        <div class="w-10 h-10 md:w-12 md:h-12 bg-amber/20 rounded-xl flex items-center justify-center mb-2">
+                            <i data-lucide="user-check" class="w-5 h-5 md:w-6 md:h-6 text-amber"></i>
+                        </div>
+                    </div>
+                    <div class="text-3xl md:text-5xl font-bold text-amber mb-1 md:mb-2">50+</div>
+                    <div class="text-xs md:text-base text-gray-300">Profesyonel Ekip</div>
                 </div>
-                <div class="text-center">
-                    <div class="text-4xl md:text-5xl font-bold text-amber mb-2">100%</div>
-                    <div class="text-gray-300">Müşteri Memnuniyeti</div>
+                <div class="text-center relative z-10">
+                    <div class="flex items-center justify-center mb-2 md:mb-3">
+                        <div class="w-10 h-10 md:w-12 md:h-12 bg-amber/20 rounded-xl flex items-center justify-center mb-2">
+                            <i data-lucide="thumbs-up" class="w-5 h-5 md:w-6 md:h-6 text-amber"></i>
+                        </div>
+                    </div>
+                    <div class="text-3xl md:text-5xl font-bold text-amber mb-1 md:mb-2">100%</div>
+                    <div class="text-xs md:text-base text-gray-300">Müşteri Memnuniyeti</div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- FAQ Section -->
-    <section id="sss" class="py-20 bg-white">
-        <div class="container mx-auto px-4 max-w-4xl">
+    <section id="sss" class="py-12 md:py-16 lg:py-20 xl:py-24 bg-gradient-to-br from-gray-50 via-white to-blue-50 relative overflow-hidden">
+        <!-- Decorative Background Elements -->
+        <div class="absolute inset-0 opacity-5">
+            <div class="absolute top-0 left-1/4 w-96 h-96 bg-amber rounded-full blur-3xl"></div>
+            <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500 rounded-full blur-3xl"></div>
+        </div>
+        
+        <div class="container mx-auto px-4 max-w-4xl relative z-10">
             <div class="text-center mb-16 scroll-reveal">
-                <h2 class="text-4xl md:text-5xl font-bold tracking-tight text-navy mb-4">Sıkça Sorulan Sorular</h2>
+                <div class="inline-block bg-amber bg-opacity-10 border border-amber rounded-full px-4 py-2 mb-4">
+                    <span class="text-amber font-semibold text-sm">💬 Sıkça Sorulan Sorular</span>
+                </div>
+                <h2 class="text-4xl md:text-5xl font-bold tracking-tight text-navy mb-4">Merak Ettiklerinizin Yanıtları</h2>
                 <p class="text-xl text-gray-600">
-                    Merak ettiklerinizin yanıtları
+                    Nakliyat sürecinde aklınıza takılan her şey burada
                 </p>
             </div>
             
             <div class="space-y-4">
                 <!-- FAQ 1 -->
-                <div class="scroll-reveal bg-gray-50 rounded-2xl overflow-hidden border border-gray-200">
-                    <button class="accordion-btn w-full text-left px-6 py-5 flex items-center justify-between hover:bg-gray-100 transition">
-                        <span class="font-semibold text-lg text-navy">Nakliyat fiyatları nasıl belirleniyor?</span>
-                        <i data-lucide="chevron-down" class="w-5 h-5 text-navy transition-transform"></i>
+                <div class="scroll-reveal accordion-item glass-card rounded-xl md:rounded-2xl overflow-hidden border border-gray-200 shadow-lg hover:shadow-xl transition-all bg-white bg-opacity-80 backdrop-blur-sm group" data-faq="1">
+                    <button class="accordion-btn w-full text-left px-4 md:px-8 py-4 md:py-6 flex items-start gap-3 md:gap-4 hover:bg-amber hover:bg-opacity-5 transition-all" aria-expanded="false" aria-controls="faq-1">
+                        <div class="faq-number flex-shrink-0 w-8 h-8 md:w-10 md:h-10 rounded-full flex items-center justify-center font-bold text-sm md:text-base text-amber border-2 border-amber">
+                            01
+                        </div>
+                        <div class="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-amber to-orange-600 rounded-lg md:rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                            <i data-lucide="dollar-sign" class="w-5 h-5 md:w-6 md:h-6 text-white"></i>
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <span class="font-bold text-base md:text-lg lg:text-xl text-navy block mb-0.5 md:mb-1 leading-tight">Nakliyat fiyatları nasıl belirleniyor?</span>
+                            <span class="text-xs md:text-sm text-gray-600 hidden sm:block">Fiyatlandırma kriterleri</span>
+                        </div>
+                        <div class="flex-shrink-0 mt-1 md:mt-2 flex items-center gap-1 md:gap-2">
+                            <span class="text-xs font-semibold text-gray-500 accordion-status hidden md:inline">Aç</span>
+                            <i data-lucide="chevron-down" class="w-5 h-5 md:w-6 md:h-6 text-amber transition-transform duration-300"></i>
+                        </div>
                     </button>
-                    <div class="accordion-content px-6 pb-5">
-                        <p class="text-gray-600 leading-relaxed">
-                            Fiyatlandırma; taşınacak eşya miktarı, mesafe, kat sayısı ve hizmet kapsamına göre belirlenir. 
-                            Ücretsiz keşif hizmetimizle size en uygun fiyatı sunuyoruz. WhatsApp veya telefon ile hemen 
-                            fiyat teklifi alabilirsiniz.
-                        </p>
+                    <div class="accordion-content" id="faq-1">
+                        <div class="accordion-inner px-4 md:px-8 pb-4 md:pb-6">
+                            <div class="pl-12 md:pl-16 border-l-2 md:border-l-4 border-amber ml-4 md:ml-6">
+                            <p class="text-gray-700 text-sm md:text-base leading-relaxed pl-3 md:pl-4">
+                                Fiyatlandırma; <span class="font-semibold text-navy">taşınacak eşya miktarı, mesafe, kat sayısı ve hizmet kapsamına</span> göre belirlenir. 
+                                Ücretsiz keşif hizmetimizle size en uygun fiyatı sunuyoruz. WhatsApp veya telefon ile hemen 
+                                fiyat teklifi alabilirsiniz.
+                            </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 
                 <!-- FAQ 2 -->
-                <div class="scroll-reveal bg-gray-50 rounded-2xl overflow-hidden border border-gray-200">
-                    <button class="accordion-btn w-full text-left px-6 py-5 flex items-center justify-between hover:bg-gray-100 transition">
-                        <span class="font-semibold text-lg text-navy">Eşyalarım sigorta kapsamında mı?</span>
-                        <i data-lucide="chevron-down" class="w-5 h-5 text-navy transition-transform"></i>
+                <div class="scroll-reveal accordion-item glass-card rounded-xl md:rounded-2xl overflow-hidden border border-gray-200 shadow-lg hover:shadow-xl transition-all bg-white bg-opacity-80 backdrop-blur-sm group" data-faq="2">
+                    <button class="accordion-btn w-full text-left px-4 md:px-8 py-4 md:py-6 flex items-start gap-3 md:gap-4 hover:bg-blue-50 transition-all" aria-expanded="false" aria-controls="faq-2">
+                        <div class="faq-number flex-shrink-0 w-8 h-8 md:w-10 md:h-10 rounded-full flex items-center justify-center font-bold text-sm md:text-base text-blue-600 border-2 border-blue-500">
+                            02
+                        </div>
+                        <div class="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-lg md:rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                            <i data-lucide="shield-check" class="w-5 h-5 md:w-6 md:h-6 text-white"></i>
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <span class="font-bold text-base md:text-lg lg:text-xl text-navy block mb-0.5 md:mb-1 leading-tight">Eşyalarım sigorta kapsamında mı?</span>
+                            <span class="text-xs md:text-sm text-gray-600 hidden sm:block">Sigorta güvencesi</span>
+                        </div>
+                        <div class="flex-shrink-0 mt-1 md:mt-2 flex items-center gap-1 md:gap-2">
+                            <span class="text-xs font-semibold text-gray-500 accordion-status hidden md:inline">Aç</span>
+                            <i data-lucide="chevron-down" class="w-5 h-5 md:w-6 md:h-6 text-blue-500 transition-transform duration-300"></i>
+                        </div>
                     </button>
-                    <div class="accordion-content px-6 pb-5">
-                        <p class="text-gray-600 leading-relaxed">
-                            Evet, tüm nakliyat hizmetlerimizde eşyalarınız tam sigorta güvencesi altındadır. 
-                            Olası hasar durumlarında sigorta şirketimiz tazmin işlemlerini gerçekleştirir. 
-                            Güvenliğiniz bizim önceliğimizdir.
-                        </p>
+                    <div class="accordion-content" id="faq-2">
+                        <div class="accordion-inner px-4 md:px-8 pb-4 md:pb-6">
+                            <div class="pl-12 md:pl-16 border-l-2 md:border-l-4 border-blue-500 ml-4 md:ml-6">
+                            <p class="text-gray-700 text-sm md:text-base leading-relaxed pl-3 md:pl-4">
+                                Evet, tüm nakliyat hizmetlerimizde eşyalarınız <span class="font-semibold text-navy">tam sigorta güvencesi</span> altındadır. 
+                                Olası hasar durumlarında sigorta şirketimiz tazmin işlemlerini gerçekleştirir. 
+                                Güvenliğiniz bizim önceliğimizdir.
+                            </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 
                 <!-- FAQ 3 -->
-                <div class="scroll-reveal bg-gray-50 rounded-2xl overflow-hidden border border-gray-200">
-                    <button class="accordion-btn w-full text-left px-6 py-5 flex items-center justify-between hover:bg-gray-100 transition">
-                        <span class="font-semibold text-lg text-navy">Paketleme malzemelerini siz mi sağlıyorsunuz?</span>
-                        <i data-lucide="chevron-down" class="w-5 h-5 text-navy transition-transform"></i>
+                <div class="scroll-reveal accordion-item glass-card rounded-xl md:rounded-2xl overflow-hidden border border-gray-200 shadow-lg hover:shadow-xl transition-all bg-white bg-opacity-80 backdrop-blur-sm group" data-faq="3">
+                    <button class="accordion-btn w-full text-left px-4 md:px-8 py-4 md:py-6 flex items-start gap-3 md:gap-4 hover:bg-green-50 transition-all" aria-expanded="false" aria-controls="faq-3">
+                        <div class="faq-number flex-shrink-0 w-8 h-8 md:w-10 md:h-10 rounded-full flex items-center justify-center font-bold text-sm md:text-base text-emerald-600 border-2 border-emerald-500">
+                            03
+                        </div>
+                        <div class="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-lg md:rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                            <i data-lucide="package-check" class="w-5 h-5 md:w-6 md:h-6 text-white"></i>
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <span class="font-bold text-base md:text-lg lg:text-xl text-navy block mb-0.5 md:mb-1 leading-tight">Paketleme malzemelerini siz mi sağlıyorsunuz?</span>
+                            <span class="text-xs md:text-sm text-gray-600 hidden sm:block">Profesyonel paketleme</span>
+                        </div>
+                        <div class="flex-shrink-0 mt-1 md:mt-2 flex items-center gap-1 md:gap-2">
+                            <span class="text-xs font-semibold text-gray-500 accordion-status hidden md:inline">Aç</span>
+                            <i data-lucide="chevron-down" class="w-5 h-5 md:w-6 md:h-6 text-emerald-500 transition-transform duration-300"></i>
+                        </div>
                     </button>
-                    <div class="accordion-content px-6 pb-5">
-                        <p class="text-gray-600 leading-relaxed">
-                            Evet, tüm paketleme malzemeleri (koli, hava kabarcıklı naylon, streç film, vb.) 
-                            tarafımızdan temin edilir. Profesyonel ekibimiz eşyalarınızı özenle paketleyerek 
-                            güvenli taşımayı sağlar.
-                        </p>
+                    <div class="accordion-content" id="faq-3">
+                        <div class="accordion-inner px-4 md:px-8 pb-4 md:pb-6">
+                            <div class="pl-12 md:pl-16 border-l-2 md:border-l-4 border-emerald-500 ml-4 md:ml-6">
+                            <p class="text-gray-700 text-sm md:text-base leading-relaxed pl-3 md:pl-4">
+                                Evet, tüm paketleme malzemeleri <span class="font-semibold text-navy">(koli, hava kabarcıklı naylon, streç film, vb.)</span> 
+                                tarafımızdan temin edilir. Profesyonel ekibimiz eşyalarınızı özenle paketleyerek 
+                                güvenli taşımayı sağlar.
+                            </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 
                 <!-- FAQ 4 -->
-                <div class="scroll-reveal bg-gray-50 rounded-2xl overflow-hidden border border-gray-200">
-                    <button class="accordion-btn w-full text-left px-6 py-5 flex items-center justify-between hover:bg-gray-100 transition">
-                        <span class="font-semibold text-lg text-navy">Aynı gün nakliyat hizmeti veriyor musunuz?</span>
-                        <i data-lucide="chevron-down" class="w-5 h-5 text-navy transition-transform"></i>
+                <div class="scroll-reveal accordion-item glass-card rounded-xl md:rounded-2xl overflow-hidden border border-gray-200 shadow-lg hover:shadow-xl transition-all bg-white bg-opacity-80 backdrop-blur-sm group" data-faq="4">
+                    <button class="accordion-btn w-full text-left px-4 md:px-8 py-4 md:py-6 flex items-start gap-3 md:gap-4 hover:bg-purple-50 transition-all" aria-expanded="false" aria-controls="faq-4">
+                        <div class="faq-number flex-shrink-0 w-8 h-8 md:w-10 md:h-10 rounded-full flex items-center justify-center font-bold text-sm md:text-base text-purple-600 border-2 border-purple-500">
+                            04
+                        </div>
+                        <div class="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-purple-500 to-pink-600 rounded-lg md:rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                            <i data-lucide="clock" class="w-5 h-5 md:w-6 md:h-6 text-white"></i>
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <span class="font-bold text-base md:text-lg lg:text-xl text-navy block mb-0.5 md:mb-1 leading-tight">Aynı gün nakliyat hizmeti veriyor musunuz?</span>
+                            <span class="text-xs md:text-sm text-gray-600 hidden sm:block">Hızlı teslimat</span>
+                        </div>
+                        <div class="flex-shrink-0 mt-1 md:mt-2 flex items-center gap-1 md:gap-2">
+                            <span class="text-xs font-semibold text-gray-500 accordion-status hidden md:inline">Aç</span>
+                            <i data-lucide="chevron-down" class="w-5 h-5 md:w-6 md:h-6 text-purple-500 transition-transform duration-300"></i>
+                        </div>
                     </button>
-                    <div class="accordion-content px-6 pb-5">
-                        <p class="text-gray-600 leading-relaxed">
-                            Evet, acil durumlar için aynı gün teslimat hizmetimiz mevcuttur. Müsaitlik durumumuza 
-                            göre aynı gün içinde nakliyat işleminizi gerçekleştirebiliriz. Detaylı bilgi için 
-                            bizimle iletişime geçin.
+                    <div class="accordion-content" id="faq-4">
+                        <div class="accordion-inner px-4 md:px-8 pb-4 md:pb-6">
+                            <div class="pl-12 md:pl-16 border-l-2 md:border-l-4 border-purple-500 ml-4 md:ml-6">
+                            <p class="text-gray-700 text-sm md:text-base leading-relaxed pl-3 md:pl-4">
+                                Evet, acil durumlar için <span class="font-semibold text-navy">aynı gün teslimat hizmetimiz</span> mevcuttur. Müsaitlik durumumuza 
+                                göre aynı gün içinde nakliyat işleminizi gerçekleştirebiliriz. Detaylı bilgi için 
+                                bizimle iletişime geçin.
+                            </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Contact CTA at bottom of FAQ -->
+            <div class="mt-12 scroll-reveal text-center">
+                <div class="bg-gradient-to-r from-navy to-blue-900 rounded-3xl p-8 md:p-12 shadow-2xl relative overflow-hidden">
+                    <div class="absolute inset-0 opacity-10">
+                        <div class="absolute top-0 right-0 w-64 h-64 bg-amber rounded-full blur-3xl"></div>
+                    </div>
+                    <div class="relative z-10">
+                        <h3 class="text-2xl md:text-3xl font-bold text-white mb-4">Başka sorunuz mu var?</h3>
+                        <p class="text-gray-300 mb-6 text-lg">
+                            7/24 müşteri hizmetleri ekibimiz size yardımcı olmak için hazır
                         </p>
+                        <a href="https://wa.me/905514834234?text=Merhaba%2C%20nakliyat%20hizmeti%20hakk%C4%B1nda%20soru%20sormak%20istiyorum." 
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="inline-block shimmer-button bg-amber text-navy px-8 py-4 rounded-xl font-bold hover:scale-105 transition-all shadow-2xl">
+                            WhatsApp'tan Soru Sor →
+                        </a>
                     </div>
                 </div>
             </div>
@@ -748,7 +1614,7 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="py-20 bg-gradient-to-br from-navy via-blue-900 to-navy text-white relative overflow-hidden">
+    <section class="py-12 md:py-16 lg:py-20 xl:py-24 bg-gradient-to-br from-navy via-blue-900 to-navy text-white relative overflow-hidden">
         <div class="absolute inset-0 opacity-10">
             <div class="mesh-gradient-1 absolute top-0 right-0 w-96 h-96 bg-amber rounded-full blur-3xl"></div>
         </div>
@@ -762,6 +1628,7 @@
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="https://wa.me/905514834234?text=Merhaba%2C%20nakliyat%20i%C3%A7in%20%C3%BCcretsiz%20fiyat%20teklifi%20almak%20istiyorum." 
                    target="_blank"
+                   rel="noopener noreferrer"
                    class="shimmer-button pulse-animation text-navy px-10 py-5 rounded-full font-bold text-lg transition flex items-center justify-center gap-3 shadow-2xl">
                     <i data-lucide="message-circle" class="w-6 h-6"></i>
                     Hemen Fiyat Teklifi Al
@@ -769,6 +1636,7 @@
                 
                 <a href="https://wa.me/905514834234?text=Merhaba%2C%20nakliyat%20hizmetiniz%20hakk%C4%B1nda%20detayl%C4%B1%20bilgi%20almak%20istiyorum." 
                    target="_blank"
+                   rel="noopener noreferrer"
                    class="bg-white bg-opacity-10 backdrop-blur-sm border-2 border-white text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-opacity-20 transition flex items-center justify-center gap-3">
                     <i data-lucide="message-square" class="w-6 h-6"></i>
                     WhatsApp'tan Detay Sor
@@ -777,156 +1645,174 @@
         </div>
     </section>
 
-    <!-- Schema.org LocalBusiness Markup -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "MovingCompany",
-      "name": "Keske Nakliyat",
-      "image": "https://www.keskenakliyat.com/logo.png",
-      "@id": "https://www.keskenakliyat.com",
-      "url": "https://www.keskenakliyat.com",
-      "telephone": "+905514834234",
-      "priceRange": "$$",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Adresiniz",
-        "addressLocality": "İstanbul",
-        "postalCode": "34000",
-        "addressCountry": "TR"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 41.0082,
-        "longitude": 28.9784
-      },
-      "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday",
-          "Saturday",
-          "Sunday"
-        ],
-        "opens": "00:00",
-        "closes": "23:59"
-      },
-      "sameAs": [
-        "https://www.facebook.com/keskenakliyat",
-        "https://www.instagram.com/keskenakliyat",
-        "https://www.twitter.com/keskenakliyat"
-      ],
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "250"
-      },
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Nakliyat Hizmetleri",
-        "itemListElement": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Evden Eve Nakliyat",
-              "description": "Profesyonel paketleme ve sigortalı taşıma hizmeti"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Ofis Taşıma",
-              "description": "Kurumsal ofis taşıma ve kurulum hizmeti"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Parça Eşya Taşıma",
-              "description": "Ekonomik parça eşya nakliyat hizmeti"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Şehirler Arası Nakliyat",
-              "description": "Türkiye geneli güvenli taşımacılık"
-            }
-          }
-        ]
-      }
-    }
-    </script>
-
-    <!-- Footer -->
-    <footer class="bg-navy text-white py-12" role="contentinfo">
-        <div class="container mx-auto px-4">
-            <div class="grid md:grid-cols-4 gap-8 mb-8">
+    <!-- Footer - PREMIUM REDESIGN -->
+    <footer class="bg-gradient-to-br from-slate-950 via-navy to-slate-900 text-white py-16 md:py-20 relative overflow-hidden" role="contentinfo">
+        <!-- Premium Background Pattern with Mesh Gradient -->
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-0 left-1/4 w-96 h-96 bg-gradient-to-br from-amber to-orange-500 rounded-full blur-3xl animate-pulse-subtle"></div>
+            <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-full blur-3xl animate-pulse-subtle" style="animation-delay: 2s;"></div>
+        </div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <!-- Main Footer Content -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-12">
                 <!-- Company Info -->
-                <div class="md:col-span-2">
-                    <div class="flex items-center space-x-2 mb-4">
-                        <div class="w-10 h-10 bg-amber rounded-lg flex items-center justify-center">
-                            <i data-lucide="truck" class="text-navy w-6 h-6"></i>
+                <div class="lg:col-span-1">
+                    <div class="flex items-center space-x-2 mb-6 group cursor-pointer">
+                        <div class="w-12 h-12 bg-gradient-to-br from-amber to-orange-600 rounded-xl flex items-center justify-center shadow-lg shadow-amber/30 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                            <i data-lucide="truck" class="text-white w-7 h-7"></i>
                         </div>
-                        <span class="text-2xl font-bold">Keske <span class="text-amber">Nakliyat</span></span>
+                        <span class="text-2xl font-bold">
+                            <span class="text-white">Keske</span> <span class="bg-gradient-to-r from-amber via-orange-400 to-amber bg-clip-text text-transparent">Nakliyat</span>
+                        </span>
                     </div>
-                    <p class="text-gray-400 mb-4">
+                    <p class="text-gray-400 mb-6 leading-relaxed">
                         Güvenilir, hızlı ve profesyonel nakliyat hizmetleri. 
-                        15 yıllık tecrübemizle eşyalarınızı güvenle taşıyoruz.
+                        <span class="text-white font-semibold">15 yıllık tecrübemizle</span> eşyalarınızı güvenle taşıyoruz.
                     </p>
+                    
+                    <!-- Premium Social Media Buttons -->
                     <div class="flex gap-3">
-                        <a href="#" class="w-10 h-10 bg-white bg-opacity-10 rounded-lg flex items-center justify-center hover:bg-amber transition">
-                            <i data-lucide="facebook" class="w-5 h-5"></i>
+                        <a href="#" class="group w-11 h-11 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl flex items-center justify-center hover:bg-gradient-to-br hover:from-amber hover:to-orange-600 hover:border-amber/50 hover:scale-110 hover:rotate-6 transition-all duration-300 hover:shadow-lg hover:shadow-amber/30">
+                            <i data-lucide="facebook" class="w-5 h-5 group-hover:scale-110 transition-transform"></i>
                         </a>
-                        <a href="#" class="w-10 h-10 bg-white bg-opacity-10 rounded-lg flex items-center justify-center hover:bg-amber transition">
-                            <i data-lucide="instagram" class="w-5 h-5"></i>
+                        <a href="#" class="group w-11 h-11 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl flex items-center justify-center hover:bg-gradient-to-br hover:from-amber hover:to-orange-600 hover:border-amber/50 hover:scale-110 hover:rotate-6 transition-all duration-300 hover:shadow-lg hover:shadow-amber/30">
+                            <i data-lucide="instagram" class="w-5 h-5 group-hover:scale-110 transition-transform"></i>
                         </a>
-                        <a href="#" class="w-10 h-10 bg-white bg-opacity-10 rounded-lg flex items-center justify-center hover:bg-amber transition">
-                            <i data-lucide="twitter" class="w-5 h-5"></i>
+                        <a href="#" class="group w-11 h-11 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl flex items-center justify-center hover:bg-gradient-to-br hover:from-amber hover:to-orange-600 hover:border-amber/50 hover:scale-110 hover:rotate-6 transition-all duration-300 hover:shadow-lg hover:shadow-amber/30">
+                            <i data-lucide="twitter" class="w-5 h-5 group-hover:scale-110 transition-transform"></i>
                         </a>
+                    </div>
+                    
+                    <!-- 7/24 Badge -->
+                    <div class="mt-6 inline-flex items-center gap-2 bg-gradient-to-r from-amber/20 via-orange-500/20 to-amber/20 border border-amber/40 rounded-full px-4 py-2 backdrop-blur-sm">
+                        <i data-lucide="clock" class="w-4 h-4 text-amber"></i>
+                        <span class="text-sm font-semibold text-amber">7/24 Kesintisiz Hizmet</span>
                     </div>
                 </div>
                 
                 <!-- Quick Links -->
                 <div>
-                    <h3 class="text-lg font-bold mb-4">Hızlı Linkler</h3>
-                    <ul class="space-y-2">
-                        <li><a href="#anasayfa" class="text-gray-400 hover:text-amber transition">Anasayfa</a></li>
-                        <li><a href="#hizmetler" class="text-gray-400 hover:text-amber transition">Hizmetler</a></li>
-                        <li><a href="#neden-biz" class="text-gray-400 hover:text-amber transition">Neden Biz?</a></li>
-                        <li><a href="#sss" class="text-gray-400 hover:text-amber transition">S.S.S</a></li>
+                    <h3 class="text-lg font-bold mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">Hızlı Linkler</h3>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="#anasayfa" class="group flex items-center gap-2 text-gray-400 hover:text-amber transition-all duration-300">
+                                <i data-lucide="chevron-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                                <span>Anasayfa</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#hizmetler" class="group flex items-center gap-2 text-gray-400 hover:text-amber transition-all duration-300">
+                                <i data-lucide="chevron-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                                <span>Hizmetler</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#neden-biz" class="group flex items-center gap-2 text-gray-400 hover:text-amber transition-all duration-300">
+                                <i data-lucide="chevron-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                                <span>Neden Biz?</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#sss" class="group flex items-center gap-2 text-gray-400 hover:text-amber transition-all duration-300">
+                                <i data-lucide="chevron-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                                <span>S.S.S</span>
+                            </a>
+                        </li>
                     </ul>
                 </div>
                 
-                <!-- Contact Info -->
+                <!-- Services -->
                 <div>
-                    <h3 class="text-lg font-bold mb-4">İletişim</h3>
+                    <h3 class="text-lg font-bold mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">Hizmetlerimiz</h3>
                     <ul class="space-y-3">
-                        <li class="flex items-start gap-2">
-                            <i data-lucide="phone" class="w-5 h-5 text-amber mt-0.5"></i>
-                            <a href="tel:+905514834234" class="text-gray-400 hover:text-amber transition">+90 5XX XXX XX XX</a>
+                        <li>
+                            <a href="#hizmetler" class="group flex items-center gap-2 text-gray-400 hover:text-amber transition-all duration-300">
+                                <i data-lucide="home" class="w-4 h-4 group-hover:scale-110 transition-transform"></i>
+                                <span>Evden Eve Nakliyat</span>
+                            </a>
                         </li>
-                        <li class="flex items-start gap-2">
-                            <i data-lucide="mail" class="w-5 h-5 text-amber mt-0.5"></i>
-                            <a href="mailto:info@keskenakliyat.com" class="text-gray-400 hover:text-amber transition">info@keskenakliyat.com</a>
+                        <li>
+                            <a href="#hizmetler" class="group flex items-center gap-2 text-gray-400 hover:text-amber transition-all duration-300">
+                                <i data-lucide="briefcase" class="w-4 h-4 group-hover:scale-110 transition-transform"></i>
+                                <span>Ofis Taşıma</span>
+                            </a>
                         </li>
-                        <li class="flex items-start gap-2">
-                            <i data-lucide="map-pin" class="w-5 h-5 text-amber mt-0.5"></i>
-                            <span class="text-gray-400">İstanbul, Türkiye</span>
+                        <li>
+                            <a href="#hizmetler" class="group flex items-center gap-2 text-gray-400 hover:text-amber transition-all duration-300">
+                                <i data-lucide="package" class="w-4 h-4 group-hover:scale-110 transition-transform"></i>
+                                <span>Parça Eşya</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#hizmetler" class="group flex items-center gap-2 text-gray-400 hover:text-amber transition-all duration-300">
+                                <i data-lucide="snowflake" class="w-4 h-4 group-hover:scale-110 transition-transform"></i>
+                                <span>Soğuk Zincir</span>
+                            </a>
                         </li>
                     </ul>
                 </div>
+                
+                <!-- Contact Info with Dark Glass Cards -->
+                <div>
+                    <h3 class="text-lg font-bold mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">İletişim</h3>
+                    <div class="space-y-3">
+                        <a href="tel:+905514834234" class="group flex items-start gap-3 p-3 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 hover:border-amber/50 transition-all duration-300 hover:shadow-lg hover:shadow-amber/20">
+                            <div class="w-10 h-10 bg-gradient-to-br from-amber to-orange-600 rounded-lg flex items-center justify-center flex-shrink-0 shadow-lg group-hover:scale-110 group-hover:rotate-6 transition-all">
+                                <i data-lucide="phone" class="w-5 h-5 text-white"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-500 mb-0.5">Telefon</p>
+                                <p class="text-white font-semibold">+90 (5XX) XXX-XX-XX</p>
+                            </div>
+                        </a>
+                        
+                        <a href="mailto:info@keskenakliyat.com" class="group flex items-start gap-3 p-3 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 hover:border-amber/50 transition-all duration-300 hover:shadow-lg hover:shadow-amber/20">
+                            <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center flex-shrink-0 shadow-lg group-hover:scale-110 group-hover:rotate-6 transition-all">
+                                <i data-lucide="mail" class="w-5 h-5 text-white"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-500 mb-0.5">E-posta</p>
+                                <p class="text-white font-semibold break-all">info@keskenakliyat.com</p>
+                            </div>
+                        </a>
+                        
+                        <div class="flex items-start gap-3 p-3 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10">
+                            <div class="w-10 h-10 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-lg flex items-center justify-center flex-shrink-0 shadow-lg">
+                                <i data-lucide="map-pin" class="w-5 h-5 text-white"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-500 mb-0.5">Adres</p>
+                                <p class="text-white font-semibold">İstanbul, Türkiye</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- WhatsApp Quick Contact -->
+                    <a href="https://wa.me/905514834234?text=Merhaba%2C%20nakliyat%20hizmeti%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." 
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="mt-4 flex items-center justify-center gap-2 bg-gradient-to-r from-green-500 to-emerald-600 text-white px-4 py-3 rounded-xl font-bold hover:scale-105 hover:shadow-lg hover:shadow-green-500/30 transition-all">
+                        <i data-lucide="message-circle" class="w-5 h-5"></i>
+                        <span>WhatsApp ile İletişim</span>
+                    </a>
+                </div>
             </div>
             
-            <div class="border-t border-gray-700 pt-8 text-center text-gray-400">
-                <p>&copy; 2025 Keske Nakliyat. Tüm hakları saklıdır.</p>
+            <!-- Premium Border with Gradient Glow -->
+            <div class="relative my-8">
+                <div class="absolute inset-0 bg-gradient-to-r from-transparent via-amber/50 to-transparent blur-sm"></div>
+                <div class="relative h-px bg-gradient-to-r from-transparent via-white/30 to-transparent"></div>
+            </div>
+            
+            <!-- Bottom Bar -->
+            <div class="flex flex-col md:flex-row items-center justify-between gap-4 text-gray-400 text-sm">
+                <p>&copy; 2026 Keske Nakliyat. Tüm hakları saklıdır.</p>
+                <div class="flex items-center gap-4">
+                    <a href="#" class="hover:text-amber transition">Gizlilik Politikası</a>
+                    <span class="text-gray-600">•</span>
+                    <a href="#" class="hover:text-amber transition">Kullanım Koşulları</a>
+                </div>
             </div>
         </div>
     </footer>
@@ -940,67 +1826,193 @@
         </a>
         <a href="https://wa.me/905514834234?text=Merhaba%2C%20nakliyat%20hizmeti%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." 
            target="_blank"
+           rel="noopener noreferrer"
            class="bg-amber text-navy py-4 rounded-xl font-bold flex items-center justify-center gap-2 active:scale-95 transition">
             <i data-lucide="message-circle" class="w-5 h-5"></i>
             WhatsApp
         </a>
     </div>
 
-    <!-- Floating WhatsApp Button (Mobile Only) -->
-    <a href="https://wa.me/905514834234?text=Merhaba%2C%20nakliyat%20hizmeti%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." 
-       target="_blank"
-       class="floating-whatsapp"
-       aria-label="WhatsApp ile İletişime Geç">
-        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="white" viewBox="0 0 24 24">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-        </svg>
-    </a>
-
     <!-- Initialize Lucide Icons -->
     <script>
-        lucide.createIcons();
+        // Constants
+        const SCROLL_THRESHOLD = 50;
+        const HEADER_HEIGHT = 80;
+        const THROTTLE_DELAY = 100;
         
-        // Mobile Menu Toggle
+        // Throttle helper function
+        function throttle(func, wait) {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => {
+                    clearTimeout(timeout);
+                    func(...args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+            };
+        }
+        
+        // Initialize Lucide Icons with error handling
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            } else {
+                console.warn('Lucide icons library not loaded');
+            }
+        });
+        
+        // Premium Scroll Effect for Navbar with throttling
+        const header = document.querySelector('header');
+        if (header) {
+            let lastScroll = 0;
+            
+            const handleScroll = throttle(() => {
+                const currentScroll = window.pageYOffset;
+                
+                if (currentScroll > SCROLL_THRESHOLD) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+                
+                lastScroll = currentScroll;
+            }, THROTTLE_DELAY);
+            
+            window.addEventListener('scroll', handleScroll, { passive: true });
+        } else {
+            console.warn('Header element not found');
+        }
+        
+        // Mobile Menu Toggle with error handling and animation
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
+        const hamburgerIcon = document.querySelector('.hamburger-icon');
         
-        mobileMenuBtn.addEventListener('click', () => {
-            const isHidden = mobileMenu.classList.toggle('hidden');
-            mobileMenuBtn.setAttribute('aria-expanded', !isHidden);
-        });
-        
-        // Close mobile menu when clicking on a link
-        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
-        mobileMenuLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
-        });
-        
-        // Accordion Functionality
-        const accordionBtns = document.querySelectorAll('.accordion-btn');
-        
-        accordionBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                const content = btn.nextElementSibling;
-                const icon = btn.querySelector('[data-lucide="chevron-down"]');
+        if (mobileMenuBtn && mobileMenu && hamburgerIcon) {
+            mobileMenuBtn.addEventListener('click', () => {
+                const isOpen = mobileMenu.classList.contains('show');
                 
-                // Close all other accordions
-                accordionBtns.forEach(otherBtn => {
-                    if (otherBtn !== btn) {
-                        const otherContent = otherBtn.nextElementSibling;
+                if (isOpen) {
+                    mobileMenu.classList.remove('show');
+                    hamburgerIcon.classList.remove('open');
+                    mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                } else {
+                    mobileMenu.classList.add('show');
+                    hamburgerIcon.classList.add('open');
+                    mobileMenuBtn.setAttribute('aria-expanded', 'true');
+                    
+                    // Refresh Lucide icons for mobile menu
+                    if (typeof lucide !== 'undefined') {
+                        setTimeout(() => lucide.createIcons(), 50);
+                    }
+                }
+            });
+            
+            // Close mobile menu when clicking on a link
+            const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+            mobileMenuLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.remove('show');
+                    hamburgerIcon.classList.remove('open');
+                    mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                });
+            });
+        }
+        
+        // Active Page Indicator - Track scroll position
+        function updateActiveNavLink() {
+            const sections = ['anasayfa', 'hizmetler', 'neden-biz', 'sss'];
+            const navLinks = document.querySelectorAll('.nav-link');
+            const scrollPosition = window.scrollY + 100; // Offset for fixed header
+            
+            let currentSection = 'anasayfa';
+            
+            sections.forEach(sectionId => {
+                const section = document.getElementById(sectionId);
+                if (section) {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.offsetHeight;
+                    
+                    if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                        currentSection = sectionId;
+                    }
+                }
+            });
+            
+            // Update active state
+            navLinks.forEach(link => {
+                if (link.getAttribute('data-section') === currentSection) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+        }
+        
+        // Throttled scroll handler for active indicator
+        const handleActiveNavScroll = throttle(updateActiveNavLink, THROTTLE_DELAY);
+        window.addEventListener('scroll', handleActiveNavScroll, { passive: true });
+        
+        // Initial call
+        updateActiveNavLink();
+        
+        // Modern Accordion Functionality with Smooth Animations
+        const accordionItems = document.querySelectorAll('.accordion-item');
+        
+        accordionItems.forEach((item) => {
+            const btn = item.querySelector('.accordion-btn');
+            const icon = btn.querySelector('[data-lucide="chevron-down"]');
+            const statusText = btn.querySelector('.accordion-status');
+            
+            btn.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+                
+                // Close all accordions
+                accordionItems.forEach((otherItem) => {
+                    if (otherItem !== item) {
+                        const otherBtn = otherItem.querySelector('.accordion-btn');
                         const otherIcon = otherBtn.querySelector('[data-lucide="chevron-down"]');
-                        otherContent.classList.remove('active');
+                        const otherStatus = otherBtn.querySelector('.accordion-status');
+                        
+                        otherItem.classList.remove('active');
+                        otherBtn.setAttribute('aria-expanded', 'false');
                         otherIcon.style.transform = 'rotate(0deg)';
+                        otherStatus.textContent = 'Aç';
+                        otherStatus.classList.remove('text-amber', 'text-blue-600', 'text-emerald-600', 'text-purple-600');
+                        otherStatus.classList.add('text-gray-500');
                     }
                 });
                 
                 // Toggle current accordion
-                content.classList.toggle('active');
-                if (content.classList.contains('active')) {
+                if (!isActive) {
+                    item.classList.add('active');
+                    btn.setAttribute('aria-expanded', 'true');
                     icon.style.transform = 'rotate(180deg)';
+                    statusText.textContent = 'Kapat';
+                    statusText.classList.remove('text-gray-500');
+                    
+                    // Set color based on FAQ number
+                    const faqNum = item.getAttribute('data-faq');
+                    if (faqNum === '1') statusText.classList.add('text-amber');
+                    else if (faqNum === '2') statusText.classList.add('text-blue-600');
+                    else if (faqNum === '3') statusText.classList.add('text-emerald-600');
+                    else if (faqNum === '4') statusText.classList.add('text-purple-600');
+                    
+                    // Smooth scroll to accordion if needed
+                    setTimeout(() => {
+                        const rect = item.getBoundingClientRect();
+                        if (rect.top < 100) {
+                            item.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                        }
+                    }, 100);
                 } else {
+                    item.classList.remove('active');
+                    btn.setAttribute('aria-expanded', 'false');
                     icon.style.transform = 'rotate(0deg)';
+                    statusText.textContent = 'Aç';
+                    statusText.classList.remove('text-amber', 'text-blue-600', 'text-emerald-600', 'text-purple-600');
+                    statusText.classList.add('text-gray-500');
                 }
             });
         });
@@ -1008,17 +2020,19 @@
         // Smooth scroll offset for fixed header
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    const headerOffset = 80;
-                    const elementPosition = target.getBoundingClientRect().top;
-                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                const href = this.getAttribute('href');
+                if (href && href !== '#') {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        const elementPosition = target.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - HEADER_HEIGHT;
 
-                    window.scrollTo({
-                        top: offsetPosition,
-                        behavior: 'smooth'
-                    });
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
                 }
             });
         });
@@ -1039,12 +2053,18 @@
         }, observerOptions);
         
         // Tüm scroll-reveal elementlerini gözlemle
-        document.querySelectorAll('.scroll-reveal').forEach(el => {
-            observer.observe(el);
+        const revealElements = document.querySelectorAll('.scroll-reveal');
+        if (revealElements.length > 0) {
+            revealElements.forEach(el => {
+                observer.observe(el);
+            });
+        }
+        
+        // Cleanup on page unload
+        window.addEventListener('beforeunload', () => {
+            if (observer) observer.disconnect();
         });
     </script>
 </body>
 
 </html>
-
-
